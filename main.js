@@ -1,4 +1,4 @@
-const text = `# Monday
+const timetableText = `# Monday
 KSOFG2 DATABASE MANAGEMENT Gr A/P|P Onsite|9:00|11:00|2:00|21-32, 35|0483 CR2|Naomi Regan-Hurley
 KSOFG2 ADVANCED PROCEDURAL PROGRAMMING Gr C/P|P Onsite|9:00|11:00|2:00|21-32, 35|0481 CR4|Martin Hynes
 KSOFG2 MOBILE APPLICATIONS DEVELOPMENT/L|L Onsite|11:00|12:00|1:00|21-32, 35|0995|Martin Kenirons
@@ -41,113 +41,121 @@ KSOFG2 DATABASE MANAGEMENT Gr C/P|P Onsite|11:00|13:00|2:00|21-32, 35|0481 CR4|N
 
 const PrintMode = false;
 const Use24Hour = false;
+const groups = ["A", "B", "C", "D"]
 
-var root = document.getElementById("root");
+function RenderGroup(SelectedGroup) {
+    var body = document.getElementById("body");
+    var root = document.createElement("div");
+    root.className = "Group" + SelectedGroup;
+    body.appendChild(root);
 
-var hours = document.createElement("div");
-hours.className = "moduleRow";
+    var hours = document.createElement("div");
+    hours.className = "moduleRow";
 
-for (let i = 9; i <= 18; i++) {
-    var div = document.createElement("div");
-    var time = document.createElement("h2");
-    time.className = "time";
-    time.classList.add("text")
-    if (Use24Hour) {
-        time.textContent = i + ":00";
-    } else {
-        time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i > 12 ? " pm" : " am");
+    for (let i = 9; i <= 18; i++) {
+        var div = document.createElement("div");
+        var time = document.createElement("h2");
+        time.className = "time";
+        time.classList.add("text")
+        if (Use24Hour) {
+            time.textContent = i + ":00";
+        } else {
+            time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i > 12 ? " pm" : " am");
+        }
+        div.appendChild(time)
+        hours.appendChild(div)
     }
-    div.appendChild(time)
-    hours.appendChild(div)
-}
 
-root.appendChild(hours);
+    root.appendChild(hours);
 
-var SelectedGroup = 0
-var groups = ["A", "B", "C", "D"]
-var daysModules;
+    var lines = timetableText.split('\n');
+    var daysModules;
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.startsWith("# ")) {
+            var title = document.createElement("h3");
+            title.className = "dayTitle";
+            title.innerText = line.substring(2);
+            root.appendChild(title);
 
-var lines = text.split('\n');
-for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    if (line.startsWith("# ")) {
-        var title = document.createElement("h3");
-        title.className = "dayTitle";
-        title.innerText = line.substring(2);
-        root.appendChild(title);
-
-        daysModules = document.createElement("div");
-        daysModules.className = "moduleRow"
-        root.appendChild(daysModules);
-        continue;
-    }
-    var data = line.split('|');
-
-    var group = toGroup(data[0]);
-
-    if (group != "All") {
-        if (SelectedGroup != -1 && group.includes(groups[SelectedGroup]) == false) {
+            daysModules = document.createElement("div");
+            daysModules.className = "moduleRow"
+            root.appendChild(daysModules);
             continue;
         }
+        var data = line.split('|');
+
+        var group = toGroup(data[0]);
+
+        if (group != "All") {
+            if (group.includes(groups[SelectedGroup]) == false) {
+                continue;
+            }
+        }
+
+        var header = document.createElement("div");
+        header.className = "moduleTop";
+
+        var middle = document.createElement("div");
+        middle.className = "moduleMiddle";
+
+        var footer = document.createElement("div");
+        footer.className = "moduleBottom";
+
+        // Name
+        var element = document.createElement("h3");
+        var mod = toModule(data[0]);
+        element.textContent = mod.name;
+        element.className = "center";
+        middle.appendChild(element);
+
+        // Room
+        element = document.createElement("h5");
+        element.textContent = data[6];
+        element.className = "text"
+        element.classList.add("flex-grow")
+        header.appendChild(element);
+
+        // Type
+        element = document.createElement("h5");
+        element.textContent = toType(data[1]);
+        element.classList.add("text");
+        element.classList.add("moduleType");
+        header.appendChild(element);
+
+        // Start
+        var start = Number(data[2].split(":")[0]) - 8;
+        var end = Number(data[3].split(":")[0]) - 8;
+        // Lecturer
+        // element = document.createElement("h5");
+        // element.textContent = start + ":" + end
+        // element.className = "text"
+        // footer.appendChild(element);
+
+        // Lecturer
+        element = document.createElement("h5");
+        element.textContent = data[7];
+        element.className = "text"
+        footer.appendChild(element);
+
+        // Module
+        var module = document.createElement("div");
+        module.className = "module";
+
+        module.style.gridColumnStart = start;
+        module.style.gridColumnEnd = end;
+
+        if (PrintMode) {
+            module.classList.add("print");
+        } else {
+            module.classList.add(mod.color);
+        }
+
+        module.appendChild(header);
+        module.appendChild(middle);
+        module.appendChild(footer);
+        daysModules.appendChild(module);
     }
-
-    var header = document.createElement("div");
-    header.className = "moduleTop";
-
-    var middle = document.createElement("div");
-    middle.className = "moduleMiddle";
-
-    var footer = document.createElement("div");
-    footer.className = "moduleBottom";
-
-    // Name
-    var element = document.createElement("h3");
-    var mod = toModule(data[0]);
-    element.textContent = mod.name;
-    element.className = "center";
-    middle.appendChild(element);
-
-    // Room
-    element = document.createElement("h5");
-    element.textContent = data[6];
-    element.className = "text"
-    element.classList.add("flex-grow")
-    header.appendChild(element);
-
-    // Type
-    element = document.createElement("h5");
-    element.textContent = toType(data[1]);
-    element.classList.add("text");
-    element.classList.add("moduleType");
-    header.appendChild(element);
-
-    // Start
-    var start = Number(data[2].split(":")[0]) - 9;
-    var end = Number(data[3].split(":")[0]) - 9;
-
-    // Lecturer
-    element = document.createElement("h5");
-    element.textContent = data[7];
-    element.className = "text"
-    footer.appendChild(element);
-
-    // Module
-    var module = document.createElement("div");
-    module.className = "module";
-
-    module.style.gridColumnStart = start;
-    module.style.gridColumnEnd = end;
-
-    if (PrintMode) {
-        module.classList.add("print");
-    } else {
-        module.classList.add(mod.color);
-    }
-
-    module.appendChild(header);
-    module.appendChild(middle);
-    module.appendChild(footer);
-    daysModules.appendChild(module);
 }
 
 function toModule(name) {
@@ -201,4 +209,35 @@ function toType(type) {
             return "ERROR: " + type;
     }
 
+}
+
+for (let index = 0; index < groups.length; index++) {
+    const g = groups[index];
+
+    var sep = document.createElement("h1")
+    sep.textContent = "Group " + g;
+    sep.className = "seperator"
+    document.getElementById("body").appendChild(sep)
+
+    RenderGroup(index)
+
+    setTimeout(() => {
+        html2canvas(document.querySelector(".Group" + index))
+            .then(canvas => {
+                canvas.style.display = 'none';
+                document.body.appendChild(canvas);
+                return canvas;
+            })
+            .then(canvas => {
+                const image = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
+                const a = document.createElement('a');
+                a.setAttribute('download', "Group " + g + '.png');
+                a.setAttribute('href', image);
+                a.click();
+                a.remove();
+                canvas.remove();
+
+                document.getElementById("root").remove();
+            });
+    }, 1);
 }
