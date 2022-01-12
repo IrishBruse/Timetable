@@ -44,10 +44,12 @@ const Use24Hour = false;
 const groups = ["A", "B", "C", "D"]
 
 function RenderGroup(SelectedGroup) {
-    var body = document.getElementById("body");
-    var root = document.createElement("div");
-    root.className = "Group" + SelectedGroup;
-    body.appendChild(root);
+    var body = document.getElementById("root");
+    var groupTimetable = document.createElement("div");
+    groupTimetable.classList.add("Group");
+    groupTimetable.classList.add(groups[SelectedGroup]);
+
+    body.appendChild(groupTimetable);
 
     var hours = document.createElement("div");
     hours.className = "moduleRow";
@@ -66,7 +68,7 @@ function RenderGroup(SelectedGroup) {
         hours.appendChild(div)
     }
 
-    root.appendChild(hours);
+    groupTimetable.appendChild(hours);
 
     var lines = timetableText.split('\n');
     var daysModules;
@@ -76,11 +78,11 @@ function RenderGroup(SelectedGroup) {
             var title = document.createElement("h3");
             title.className = "dayTitle";
             title.innerText = line.substring(2);
-            root.appendChild(title);
+            groupTimetable.appendChild(title);
 
             daysModules = document.createElement("div");
             daysModules.className = "moduleRow"
-            root.appendChild(daysModules);
+            groupTimetable.appendChild(daysModules);
             continue;
         }
         var data = line.split('|');
@@ -126,11 +128,6 @@ function RenderGroup(SelectedGroup) {
         // Start
         var start = Number(data[2].split(":")[0]) - 8;
         var end = Number(data[3].split(":")[0]) - 8;
-        // Lecturer
-        // element = document.createElement("h5");
-        // element.textContent = start + ":" + end
-        // element.className = "text"
-        // footer.appendChild(element);
 
         // Lecturer
         element = document.createElement("h5");
@@ -214,30 +211,34 @@ function toType(type) {
 for (let index = 0; index < groups.length; index++) {
     const g = groups[index];
 
-    var sep = document.createElement("h1")
-    sep.textContent = "Group " + g;
-    sep.className = "seperator"
-    document.getElementById("body").appendChild(sep)
-
     RenderGroup(index)
 
+    const button = document.createElement('button');
+    button.className = "download";
+
+    const a = document.createElement('a');
+    a.className = "Group" + g + "Download"
+    a.innerText = "Group " + g
+    a.setAttribute('download', "Group " + g + '.png');
+
+
+    button.appendChild(a);
+
+    document.querySelector(".Group." + g).insertBefore(button, document.querySelector(".Group." + g).firstChild)
+
     setTimeout(() => {
-        html2canvas(document.querySelector(".Group" + index))
+        html2canvas(document.querySelector(".Group." + g))
             .then(canvas => {
                 canvas.style.display = 'none';
                 document.body.appendChild(canvas);
+
                 return canvas;
             })
             .then(canvas => {
                 const image = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
-                const a = document.createElement('a');
-                a.setAttribute('download', "Group " + g + '.png');
-                a.setAttribute('href', image);
-                a.click();
-                a.remove();
-                canvas.remove();
+                document.querySelector(".Group" + g + "Download").setAttribute('href', image);
+                document.querySelector(".Group" + g + "Download").parentElement.style.backgroundColor = "#67e672";
 
-                document.getElementById("root").remove();
             });
     }, 1);
 }
