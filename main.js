@@ -1,61 +1,91 @@
-const timetableText = `Monday
-
+// https://timetable.gmit.ie/SWS2223/(S(muzwlv55l2uzryvm4ryohl55))/showtimetable.aspx
+const timetableListViewText = `Monday
 Activity	Type	Start	End	Duration	Weeks	Room	Staff
-KSOFG2 DATABASE MANAGEMENT Gr A/P	P Onsite	9:00	11:00	2:00	21-32, 35	0483 CR2	Naomi Regan-Hurley
-KSOFG2 ADVANCED PROCEDURAL PROGRAMMING Gr C/P	P Onsite	9:00	11:00	2:00	21-32, 35	0481 CR4	Martin Hynes
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT/L	L Onsite	11:00	12:00	1:00	21-32, 35	0995	Martin Kenirons
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2/L	L Onsite	12:00	13:00	1:00	21-32, 35	0996	Deirdre O'Donovan
-KSOFG2 DATA STRUCTURES AND ALGORITHMS Gr C	P Onsite	14:00	15:00	1:00	21-32, 35	0481 CR4	John Healy
-KSOFG2 DATABASE MANAGEMENT Gr D/P	P Onsite	14:00	16:00	2:00	21-32, 35	0484 CR1	Naomi Regan-Hurley
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT Gr A/P	P Onsite	14:00	16:00	2:00	21-32, 35	0480 CR7	Martin Kenirons
-KSOFG1 PEER ASSISTED STUDY SESSION Gr C,D/PASS	Ol	16:00	17:00	1:00	21-32, 35
-KSOFG1 PEER ASSISTED STUDY SESSION Gr A+B/PASS	Ol	16:00	17:00	1:00	21-32, 35
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr C/P	P	9:00	10:00	1:00	4-9, 11-17	0436 CR5	Gerard Harrison
+KSOFG3 OPERATING SYSTEMS Gr C/T	T	11:00	12:00	1:00	4-9, 11-17	0156	Dominic Carr
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr A/P	P	11:00	12:00	1:00	4-9, 11-17	0484 CR1	Gerard Harrison
+KSOFG3 GRAPHICS PROGRAMMING/L	L	13:00	14:00	1:00	4-9, 11-17	0996	Brian Mc Ginley
+KSOFG3 OPERATING SYSTEMS/L	L	14:00	15:00	1:00	4-9, 11-17	0996	Martin Hynes
+
 Tuesday
-
 Activity	Type	Start	End	Duration	Weeks	Room	Staff
-KSOFG2 DATA STRUCTURES AND ALGORITHMS/L	L Onsite	9:00	10:00	1:00	21-32, 35	0995	John Healy
-KCDMG2/KSOFG2 PROJECT MANAGEMENT/L	L Onsite	11:00	13:00	2:00	21-32, 35	0903	Joe Corr
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2/L	L Onsite	13:00	14:00	1:00	21-32, 35	0995	Deirdre O'Donovan
-KSOFG2 PROJECT MANAGEMENT Gr C/P	P Onsite	15:00	16:00	1:00	21-32, 35	0484 CR1	Joe Corr
-KSOFG2 PROJECT MANAGEMENT Gr A/P	P Onsite	16:00	17:00	1:00	21-32, 35	0481 CR4	Joe Corr
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT Gr B/P	P Onsite	16:00	18:00	2:00	21-32, 35	0484 CR1	Martin Kenirons
+KSOFG3 OPERATING SYSTEMS 1 Gr C/P	P	9:00	11:00	2:00	4-9, 11-17	0436 CR5	Dominic Carr
+KSOFG3 GRAPHICS PROGRAMMING Gr A/P	P	9:00	11:00	2:00	4-9, 11-17	0484 CR1	Brian Mc Ginley
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr B/P	P	9:00	11:00	2:00	4-9, 11-17	0480 CR7	Gerard Harrison
+KSOFG3 GRAPHICS PROGRAMMING Gr C/P	P	11:00	13:00	2:00	4-9, 11-17	0480 CR7	Brian Mc Ginley
+KSOFG3 DATA REPRESENTATION AND QUERYING Gr A/P	P	11:00	13:00	2:00	4-9, 11-17	0479 CR8	Martin Kenirons
+KSOFG3 OPERATING SYSTEMS 1 Gr B/P	P	11:00	13:00	2:00	4-9, 11-17	0484 CR1	Martin Hynes
+KSOFG3 DATA REPRESENTATION AND QUERYING Gr B/P	P	14:00	16:00	2:00	4-9, 11-17	0304 CR6	Tbc Sci
+KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L	L	16:00	17:00	1:00	4-9, 11-17	0941	Dominic Carr
+
 Wednesday
-
 Activity	Type	Start	End	Duration	Weeks	Room	Staff
-KSOFG2 DATA STRUCTURES AND ALGORITHMS Gr B	P Onsite	9:00	10:00	1:00	21-32, 35	0481 CR4	John Healy
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT Gr D/P	P Onsite	9:00	11:00	2:00	21-32, 35	0484 CR1	Martin Kenirons
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2 Gr C/P	P Onsite	9:00	11:00	2:00	21-32, 35	0483 CR2	Deirdre O'Donovan
-KSOFG2 ADVANCED PROCEDURAL PROGRAMMING Gr B/P	P Onsite	10:00	12:00	2:00	21-32, 35	0481 CR4	Martin Hynes
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2 Gr D/P	P Onsite	11:00	13:00	2:00	21-32, 35	0479 CR8	Deirdre O'Donovan
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2 Gr A/P	P Onsite	11:00	13:00	2:00	21-32, 35	0483 CR2	Dominic Carr
-KSOFG2 PROJECT MANAGEMENT Gr D/P	P Onsite	14:00	15:00	1:00	21-32, 35	0481 CR4	Joe Corr
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT Gr C/P	P Onsite	14:00	16:00	2:00	21-32, 35	0484 CR1	Martin Kenirons
-KSOFG2 DATA STRUCTURES AND ALGORITHMS Gr A/P	P Onsite	15:00	16:00	1:00	21-32, 35	0481 CR4	John Healy
-KSOFG2 PROJECT MANAGEMENT Gr B/P	P Onsite	15:00	16:00	1:00	21-32, 35	0483 CR2	Joe Corr
+KSOFG3 OPERATING SYSTEMS Gr B/T	T	9:00	10:00	1:00	4-9, 11-17	PF04	Michael Duignan
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr C/P	P	9:00	11:00	2:00	4-9, 11-17	0484 CR1	Gerard Harrison
+KSOFG3 OPERATING SYSTEMS Gr A/T	T	11:00	12:00	1:00	4-9, 11-17	0351	Dominic Carr
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr B/P	P	11:00	12:00	1:00	4-9, 11-17	0436 CR5	Gerard Harrison
+KSOFG3 DATA CENTRIC WEB APPLICATIONS/L	L	12:00	13:00	1:00	4-9, 11-17	0995	Gerard Harrison
+KSOFG3 OBJECT ORIENTED PROGRAMMING/L	L	14:00	16:00	2:00	4-9, 11-17	0903	John Healy
+KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L	L	16:00	17:00	1:00	4-9, 11-17	0995	Dominic Carr
+
 Thursday
-
 Activity	Type	Start	End	Duration	Weeks	Room	Staff
-KSOFG2 ADVANCED PROCEDURAL PROGRAMMING/L	L Onsite	10:00	11:00	1:00	21-32, 35	0996	Martin Hynes
-KSOFG2 DATA STRUCTURES AND ALGORITHMS/L	L Onsite	11:00	12:00	1:00	21-32, 35	0995	John Healy
-KSOFG2 ADVANCED PROCEDURAL PROGRAMMING Gr D/P	P Onsite	12:00	14:00	2:00	21-32, 35	0484 CR1	Martin Hynes
-KSOFG2 DATABASE MANAGEMENT Gr B/P	P Onsite	13:00	15:00	2:00	21-32, 35	0479 CR8	Naomi Regan-Hurley
-KSOFG2 MOBILE APPLICATIONS DEVELOPMENT/L	L Onsite	15:00	16:00	1:00	21-32, 35	0995	Martin Kenirons
-KSOFG2 ADVANCED PROCEDURAL PROGRAMMING Gr A/P/01	P Onsite	16:00	18:00	2:00	21-32, 35	0484 CR1	Martin Hynes
+KSOFG3 OPERATING SYSTEMS/L	L	10:00	11:00	1:00	4-9, 11-17	0996	Martin Hynes
+KSOFG3 OBJECT ORIENTED PROGRAMMING/L	L	12:00	13:00	1:00	4-9, 11-17	0996	John Healy
+KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L	L	14:00	15:00	1:00	4-9, 11-17	0903	Dominic Carr
+KSOFG3/KCDMG4 DATA REPRESENTATION AND QUERYING/L	L	15:00	16:00	1:00	4-9, 11-17	0941	Martin Kenirons
+
 Friday
-
 Activity	Type	Start	End	Duration	Weeks	Room	Staff
-KCDMG2/KSOFG2 DATABASE MANAGEMENT/L	L Onsite	9:00	11:00	2:00	21-32, 35	0903	Naomi Regan-Hurley
-KSOFG2 DATA STRUCTURES AND ALGORITHMS Gr D	P Onsite	11:00	12:00	1:00	21-32, 35	0482 CR3	John Healy
-KSOFG2 APPLIED NETWORKING TECHNOLOGY 2 Gr B/P	P Onsite	11:00	13:00	2:00	21-32, 35	0483 CR2	Deirdre O'Donovan
-KSOFG2 DATABASE MANAGEMENT Gr C/P   P Onsite	11:00	13:00	2:00	21-32, 35	0481 CR4	Naomi Regan-Hurley
+KSOFG3 DATA REPRESENTATION AND QUERYING Gr C/P	P	9:00	11:00	2:00	4-9, 11-17	0370 Science Computer Lab	Martin Kenirons
+KSOFG3 GRAPHICS PROGRAMMING Gr B/P	P	9:00	11:00	2:00	4-9, 11-17	0483 CR2	Brian Mc Ginley
+KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr A/P	P	9:00	11:00	2:00	4-9, 11-17	0484 CR1	Gerard Harrison
+KSOFG3 OPERATING SYSTEMS Gr A/P	P	11:00	13:00	2:00	4-9, 11-17	0483 CR2	Martin Hynes
 `;
 
 const PrintMode = false;
 const Use24Hour = false;
-const groups = ["A", "B", "C", "D"]
+const groups = ["A", "B", "C"]
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-function RenderGroup(SelectedGroup) {
+const startTime = 9;
+const endTime = 16;
+
+function toModule(name)
+{
+    if (name.includes("DATA CENTRIC WEB APPLICATIONS"))
+    {
+        return { name: "Data Centric Web Applications", color: "yellow" }
+    }
+    else if (name.includes("GRAPHICS PROGRAMMING"))
+    {
+        return { name: "Graphics Programming", color: "orange" };
+    }
+    else if (name.includes("OPERATING SYSTEMS"))
+    {
+        return { name: "Operating Systems", color: "green" };
+    }
+    else if (name.includes("DATA REPRESENTATION AND QUERYING"))
+    {
+        return { name: "Data Representation And Querying", color: "blue" };
+    }
+    else if (name.includes("SOFTWARE QUALITY MANAGEMENT"))
+    {
+        return { name: "Software Quality Management", color: "red" };
+    }
+    else if (name.includes("OBJECT ORIENTED PROGRAMMING"))
+    {
+        return { name: "Object Oriented Programming", color: "pink" };
+    }
+    else
+    {
+        console.error("toModule(" + name + ")");
+        return { name: name, color: "pink" };
+    }
+}
+
+function RenderGroup(SelectedGroup)
+{
     var body = document.getElementById("root");
     var groupTimetable = document.createElement("div");
     groupTimetable.classList.add("Group");
@@ -65,15 +95,18 @@ function RenderGroup(SelectedGroup) {
 
     var hours = document.createElement("div");
     hours.className = "moduleRow";
-
-    for (let i = 9; i <= 18; i++) {
+    addColumnTemplates(hours)
+    for (let i = startTime; i <= endTime; i++)
+    {
         var div = document.createElement("div");
         var time = document.createElement("h2");
         time.className = "time";
         time.classList.add("text")
-        if (Use24Hour) {
+        if (Use24Hour)
+        {
             time.textContent = i + ":00";
-        } else {
+        } else
+        {
             time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i > 12 ? " pm" : " am");
         }
         div.appendChild(time)
@@ -82,16 +115,19 @@ function RenderGroup(SelectedGroup) {
 
     groupTimetable.appendChild(hours);
 
-    var lines = timetableText.split('\n');
+    var lines = timetableListViewText.split('\n');
     var daysModules;
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++)
+    {
         const line = lines[i];
 
-        if (line.length < 3 || line.startsWith("Activity")) {
+        if (line.length < 3 || line.startsWith("Activity"))
+        {
             continue;
         }
 
-        if (days.includes(line)) {
+        if (days.includes(line))
+        {
             var title = document.createElement("h3");
             title.className = "dayTitle";
             title.innerText = line;
@@ -99,6 +135,8 @@ function RenderGroup(SelectedGroup) {
 
             daysModules = document.createElement("div");
             daysModules.className = "moduleRow"
+            addColumnTemplates(daysModules);
+
             groupTimetable.appendChild(daysModules);
             continue;
         }
@@ -106,8 +144,10 @@ function RenderGroup(SelectedGroup) {
 
         var group = toGroup(data[0]);
 
-        if (group != "All") {
-            if (group.includes(groups[SelectedGroup]) == false) {
+        if (group != "All")
+        {
+            if (group.includes(groups[SelectedGroup]) == false)
+            {
                 continue;
             }
         }
@@ -159,9 +199,11 @@ function RenderGroup(SelectedGroup) {
         module.style.gridColumnStart = start;
         module.style.gridColumnEnd = end;
 
-        if (PrintMode) {
+        if (PrintMode)
+        {
             module.classList.add("print");
-        } else {
+        } else
+        {
             module.classList.add(mod.color);
         }
 
@@ -172,35 +214,29 @@ function RenderGroup(SelectedGroup) {
     }
 }
 
-function toModule(name) {
-    if (name.includes("DATABASE MANAGEMENT")) {
-        return { name: "Database Management", color: "yellow" }
-    } else if (name.includes("ADVANCED PROCEDURAL PROGRAMMING")) {
-        return { name: "Advanced Procedural", color: "orange" };
-    } else if (name.includes("MOBILE APPLICATIONS DEVELOPMENT")) {
-        return { name: "Mobile App Development", color: "green" };
-    } else if (name.includes("APPLIED NETWORKING TECHNOLOGY 2")) {
-        return { name: "Network Tech 2", color: "blue" };
-    } else if (name.includes("DATA STRUCTURES AND ALGORITHMS")) {
-        return { name: "Data & Algorithms", color: "red" };
-    } else if (name.includes("PROJECT MANAGEMENT")) {
-        return { name: "Project Management", color: "pink" };
-    } else if (name.includes("PEER ASSISTED STUDY SESSION")) {
-        return { name: "Study Session", color: "gray" };
-    } else {
-        console.error("toModuleName: " + name);
+function addColumnTemplates(element)
+{
+    let frs = ""
+    for (let i = 0; i <= (endTime - startTime); i++)
+    {
+        frs += "1fr ";
     }
+    element.style.gridTemplateColumns = frs;
+
 }
 
-function toGroup(group) {
+function toGroup(group)
+{
     var start = group.indexOf("Gr ");
     var end = group.indexOf("/");
 
-    if (end == -1) {
+    if (end == -1)
+    {
         end = group.length;
     }
 
-    if (start == -1) {
+    if (start == -1)
+    {
         return "All";
     }
 
@@ -210,22 +246,20 @@ function toGroup(group) {
     return group;
 }
 
-function toType(type) {
-    switch (type[0]) {
-        case "O":
-            return "(Online)"
-        case "P":
-            return "(Practical)"
-        case "L":
-            return "(Lecture)"
-
-        default:
-            return "ERROR: " + type;
+function toType(type)
+{
+    switch (type[0])
+    {
+        case "O": return "(Online)"
+        case "P": return "(Practical)"
+        case "L": return "(Lecture)"
+        default: return "ERROR: " + type;
     }
 
 }
 
-for (let index = 0; index < groups.length; index++) {
+for (let index = 0; index < groups.length; index++)
+{
     const g = groups[index];
 
     RenderGroup(index)
@@ -235,23 +269,26 @@ for (let index = 0; index < groups.length; index++) {
 
     const a = document.createElement('a');
     a.className = "Group" + g + "Download"
-    a.innerText = "Group " + g
+    a.innerText = "Download Group " + g
     a.setAttribute('download', "Group " + g + '.png');
 
 
     button.appendChild(a);
 
-    document.querySelector(".Group." + g).insertBefore(button, document.querySelector(".Group." + g).firstChild)
+    document.querySelector("#buttons").appendChild(button)
 
-    setTimeout(() => {
+    setTimeout(() =>
+    {
         html2canvas(document.querySelector(".Group." + g))
-            .then(canvas => {
+            .then(canvas =>
+            {
                 canvas.style.display = 'none';
                 document.body.appendChild(canvas);
 
                 return canvas;
             })
-            .then(canvas => {
+            .then(canvas =>
+            {
                 const image = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
                 document.querySelector(".Group" + g + "Download").setAttribute('href', image);
                 document.querySelector(".Group" + g + "Download").parentElement.style.backgroundColor = "#67e672";
