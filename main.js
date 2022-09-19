@@ -294,19 +294,38 @@ function toType(type)
 
 let i = 0;
 
-Test(i);
-
 document.body.onkeyup = function (e)
 {
     if (e.keyCode == 32)
     {
         i++
-        Test(i)
+        RenderAndSaveGroupTimetable(i)
+    }
+
+    if (e.keyCode == 13)
+    {
+        setTimeout(() => RenderAndSaveGroupTimetable(0), 1000);
+        setTimeout(() => RenderAndSaveGroupTimetable(1), 2000);
+        setTimeout(() => RenderAndSaveGroupTimetable(2), 3000);
     }
 }
 
-function Test(i)
+function RenderAndSaveGroupTimetable(i)
 {
+    html2canvas(document.getElementById("root").parentElement, {
+        onrendered: function (canvas)
+        {
+            var tempcanvas = document.createElement('canvas');
+            tempcanvas.width = 1920;
+            tempcanvas.height = 1080;
+            var context = tempcanvas.getContext('2d');
+            context.drawImage(canvas, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+            var link = document.createElement("a");
+            link.href = tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+            link.download = "Group " + String.fromCharCode(((i % groupsTimetableText.length) + 97)).toUpperCase();
+            link.click();
+        }
+    });
     document.querySelector("#Title").textContent = "Group " + String.fromCharCode(((i % groupsTimetableText.length) + 97)).toUpperCase()
     document.querySelector("#root").innerHTML = ""
     RenderGroup(i % groupsTimetableText.length)
