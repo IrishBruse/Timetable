@@ -1,9 +1,6 @@
-# GMIT-Timetable
+# ATU Timetable
 
-GMIT Timetable renderer with colors
+Download the exel `.xlsx` file for your groups
+https://classtimetable.atugalwaymayo.ie/
 
-Get data from gmit.ie
-# **list view**
-and ctrl select all groups at the same time remove header or use ublock to remove it automatically
-then convert the copyied data to
-https://www.convertsimple.com/convert-tsv-to-csv/
+Then hit space to cycle through them or enter to render out all files.

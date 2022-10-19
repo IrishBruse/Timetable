@@ -9,6 +9,9 @@
 }
 
 body {
+    width: 1920px;
+    height: 1080px;
+
     margin: 0rem;
     background-color: #191d1f;
     color: #86c332;
