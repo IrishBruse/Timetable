@@ -1,89 +1,4 @@
-// https://timetable.gmit.ie/SWS2223/(S(muzwlv55l2uzryvm4ryohl55))/showtimetable.aspx
-const groupsTimetableText = [
-    `Monday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr A/P,P,12:00,13:00,1:00,"4-9, 11-17",0484 CR1,Gerard Harrison
-KSOFG3 GRAPHICS PROGRAMMING/L,L,13:00,14:00,1:00,"4-9, 11-17",0996,Brian Mc Ginley
-KSOFG3 OPERATING SYSTEMS/L,L,14:00,15:00,1:00,"4-9, 11-17",0996,Martin Hynes
-Tuesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 GRAPHICS PROGRAMMING Gr A/P,P,9:00,11:00,2:00,"4-9, 11-17",0484 CR1,Brian Mc Ginley
-KSOFG3 DATA REPRESENTATION AND QUERYING Gr A/P,P,11:00,13:00,2:00,"4-9, 11-17",0484 CR1,Martin Kenirons
-KSOFG3 GRAPHICS PROGRAMMING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Brian Mc Ginley
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0941,Dominic Carr
-Wednesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS Gr A/T,T,11:00,12:00,1:00,"4-9, 11-17",0368,Dominic Carr
-KSOFG3 DATA CENTRIC WEB APPLICATIONS/L,L,12:00,13:00,1:00,"4-9, 11-17",0995,Gerard Harrison
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,14:00,16:00,2:00,"4-9, 11-17",0903,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0995,Dominic Carr
-Thursday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS/L,L,10:00,11:00,1:00,"4-9, 11-17",0996,Martin Hynes
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,12:00,13:00,1:00,"4-9, 11-17",0996,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,14:00,15:00,1:00,"4-9, 11-17",0903,Dominic Carr
-KSOFG3/KCDMG4 DATA REPRESENTATION AND QUERYING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Martin Kenirons
-Friday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr A/P,P,9:00,11:00,2:00,"4-9, 11-17",0484 CR1,Gerard Harrison
-KSOFG3 OPERATING SYSTEMS Gr A/P,P,11:00,13:00,2:00,"4-9, 11-17",0483 CR2,Martin Hynes
-`, `
-Monday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 GRAPHICS PROGRAMMING/L,L,13:00,14:00,1:00,"4-9, 11-17",0996,Brian Mc Ginley
-KSOFG3 OPERATING SYSTEMS/L,L,14:00,15:00,1:00,"4-9, 11-17",0996,Martin Hynes
-Tuesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr B/P,P,9:00,11:00,2:00,"4-9, 11-17",0480 CR7,Gerard Harrison
-KSOFG3 OPERATING SYSTEMS 1 Gr B/P,P,11:00,13:00,2:00,"4-9, 11-17",0479 CR8,Martin Hynes
-KSOFG3 GRAPHICS PROGRAMMING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Brian Mc Ginley
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0941,Dominic Carr
-Wednesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS Gr B/T,T,9:00,10:00,1:00,"4-9, 11-17",PF04,Dominic Carr
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr B/P,P,11:00,12:00,1:00,"4-9, 11-17",0436 CR5,Gerard Harrison
-KSOFG3 DATA CENTRIC WEB APPLICATIONS/L,L,12:00,13:00,1:00,"4-9, 11-17",0995,Gerard Harrison
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,14:00,16:00,2:00,"4-9, 11-17",0903,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0995,Dominic Carr
-Thursday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS/L,L,10:00,11:00,1:00,"4-9, 11-17",0996,Martin Hynes
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,12:00,13:00,1:00,"4-9, 11-17",0996,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,14:00,15:00,1:00,"4-9, 11-17",0903,Dominic Carr
-KSOFG3/KCDMG4 DATA REPRESENTATION AND QUERYING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Martin Kenirons
-Friday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 GRAPHICS PROGRAMMING Gr B/P,P,9:00,11:00,2:00,"4-9, 11-17",0483 CR2,Brian Mc Ginley
-KSOFG3 DATA REPRESENTATION AND QUERYING Gr B/P,P,11:00,13:00,2:00,"4-9, 11-17",0480 CR7,Martin Kenirons
-`, `
-Monday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr C/P,P,10:00,11:00,1:00,"4-9, 11-17",0436 CR5,Gerard Harrison
-KSOFG3 OPERATING SYSTEMS Gr C/T,T,11:00,12:00,1:00,"4-9, 11-17",0156,Dominic Carr
-KSOFG3 GRAPHICS PROGRAMMING/L,L,13:00,14:00,1:00,"4-9, 11-17",0996,Brian Mc Ginley
-KSOFG3 OPERATING SYSTEMS/L,L,14:00,15:00,1:00,"4-9, 11-17",0996,Martin Hynes
-Tuesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS 1 Gr C/P,P,9:00,11:00,2:00,"4-9, 11-17",0436 CR5,Dominic Carr
-KSOFG3 GRAPHICS PROGRAMMING Gr C/P,P,11:00,13:00,2:00,"4-9, 11-17",0480 CR7,Brian Mc Ginley
-KSOFG3 GRAPHICS PROGRAMMING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Brian Mc Ginley
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0941,Dominic Carr
-Wednesday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA CENTRIC WEB APPLICATIONS Gr C/P,P,9:00,11:00,2:00,"4-9, 11-17",0436 CR5,Gerard Harrison
-KSOFG3 DATA CENTRIC WEB APPLICATIONS/L,L,12:00,13:00,1:00,"4-9, 11-17",0995,Gerard Harrison
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,14:00,16:00,2:00,"4-9, 11-17",0903,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,16:00,17:00,1:00,"4-9, 11-17",0995,Dominic Carr
-Thursday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 OPERATING SYSTEMS/L,L,10:00,11:00,1:00,"4-9, 11-17",0996,Martin Hynes
-KSOFG3 OBJECT ORIENTED PROGRAMMING/L,L,12:00,13:00,1:00,"4-9, 11-17",0996,John Healy
-KCDMG3/KSOFG3 SOFTWARE QUALITY MANAGEMENT/L,L,14:00,15:00,1:00,"4-9, 11-17",0903,Dominic Carr
-KSOFG3/KCDMG4 DATA REPRESENTATION AND QUERYING/L,L,15:00,16:00,1:00,"4-9, 11-17",0941,Martin Kenirons
-Friday
-Activity,Type,Start,End,Duration,Weeks,Room,Staff
-KSOFG3 DATA REPRESENTATION AND QUERYING Gr C/P,P,9:00,11:00,2:00,"4-9, 11-17",0370 Science Computer Lab,Martin Kenirons`
-];
+// GA_ESOEG
 
 const PrintMode = false;
 const Use24Hour = false;
@@ -91,6 +6,8 @@ const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 const startTime = 9;
 const endTime = 16;
+
+let timetables = []
 
 function toModule(name)
 {
@@ -125,7 +42,7 @@ function toModule(name)
     }
 }
 
-function RenderGroup(SelectedGroup)
+function RenderGroup(groupIndex)
 {
     var body = document.getElementById("root");
     var groupTimetable = document.createElement("div");
@@ -145,7 +62,8 @@ function RenderGroup(SelectedGroup)
         if (Use24Hour)
         {
             time.textContent = i + ":00";
-        } else
+        }
+        else
         {
             time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i > 12 ? " pm" : " am");
         }
@@ -155,22 +73,22 @@ function RenderGroup(SelectedGroup)
 
     groupTimetable.appendChild(hours);
 
-    var lines = groupsTimetableText[SelectedGroup].split('\n');
+
+    var modules = timetables[groupIndex];
     var daysModules;
-    for (let i = 0; i < lines.length; i++)
+
+    let lastDay = ""
+
+    for (let i = 0; i < modules.length; i++)
     {
-        const line = lines[i];
+        var data = modules[i];
+        console.log(data);
 
-        if (line.length < 3 || line.startsWith("Activity"))
-        {
-            continue;
-        }
-
-        if (days.includes(line))
+        if (lastDay != data.Day)
         {
             var title = document.createElement("h3");
             title.className = "dayTitle";
-            title.innerText = line;
+            title.innerText = data.Day;
             groupTimetable.appendChild(title);
 
             daysModules = document.createElement("div");
@@ -178,10 +96,7 @@ function RenderGroup(SelectedGroup)
             addColumnTemplates(daysModules);
 
             groupTimetable.appendChild(daysModules);
-            continue;
         }
-        var data = line.split(',');
-        console.log(data);
 
         var header = document.createElement("div");
         header.className = "moduleTop";
@@ -194,28 +109,28 @@ function RenderGroup(SelectedGroup)
 
         // Name
         var element = document.createElement("h3");
-        var mod = toModule(data[0]);
+        var mod = toModule(data.Module);
         element.textContent = mod.name;
         element.className = "center";
         middle.appendChild(element);
 
         // Room
         element = document.createElement("h5");
-        element.textContent = data[7];
+        element.textContent = data.Location;
         element.className = "text"
         element.classList.add("flex-grow")
         header.appendChild(element);
 
         // Type
         element = document.createElement("h5");
-        element.textContent = toType(data[1]);
+        element.textContent = toType(data.Description.split("/")[1]);
         element.classList.add("text");
         element.classList.add("moduleType");
         header.appendChild(element);
 
         // Start
-        var start = Number(data[2].split(":")[0]) - 8;
-        var end = Number(data[3].split(":")[0]) - 8;
+        var start = Number(data["Start Time"].split(":")[0]) - 8;
+        var end = Number(data["End Time"].split(":")[0]) - 8;
 
         // Lecturer
         element = document.createElement("h5");
@@ -224,7 +139,7 @@ function RenderGroup(SelectedGroup)
         footer.appendChild(element);
 
         // Module
-        var module = document.createElement("div");
+        let module = document.createElement("div");
         module.className = "module";
 
         module.style.gridColumnStart = start;
@@ -243,6 +158,8 @@ function RenderGroup(SelectedGroup)
         module.appendChild(middle);
         module.appendChild(footer);
         daysModules.appendChild(module);
+
+        lastDay = data.Day;
     }
 }
 
@@ -280,7 +197,7 @@ function toGroup(group)
 
 function toType(type)
 {
-    switch (type[0])
+    switch (type)
     {
         case "P": return "(Practical)"
         case "L": return "(Lecture)"
@@ -288,7 +205,7 @@ function toType(type)
         case "S": return "(Seminar)"
         case "OL": return "(Online)"
         case "Lab": return "(Lab)"
-        default: return "(" + type + ")";
+        default: return "(Lecture)";
     }
 }
 
@@ -296,13 +213,16 @@ let i = 0;
 
 document.body.onkeyup = function (e)
 {
-    if (e.keyCode == 32)
+    const spacebar = 32;
+    const enter = 13;
+
+    if (e.keyCode == spacebar)
     {
         i++
         RenderAndSaveGroupTimetable(i)
     }
 
-    if (e.keyCode == 13)
+    if (e.keyCode == enter)
     {
         setTimeout(() => RenderAndSaveGroupTimetable(0), 1000);
         setTimeout(() => RenderAndSaveGroupTimetable(1), 2000);
@@ -322,11 +242,44 @@ function RenderAndSaveGroupTimetable(i)
             context.drawImage(canvas, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
             var link = document.createElement("a");
             link.href = tempcanvas.toDataURL('image/jpg');   //function blocks CORS
-            link.download = "Group " + String.fromCharCode(((i % groupsTimetableText.length) + 97)).toUpperCase();
+            link.download = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase();
             link.click();
         }
     });
-    document.querySelector("#Title").textContent = "Group " + String.fromCharCode(((i % groupsTimetableText.length) + 97)).toUpperCase()
+    document.querySelector("#Title").textContent = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase()
     document.querySelector("#root").innerHTML = ""
-    RenderGroup(i % groupsTimetableText.length)
+    RenderGroup(i % timetables.length)
 }
+
+function readFile(e)
+{
+    const Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+    let data = e.target.result
+    let spreadsheet = XLSX.read(data);
+    let sheet = spreadsheet.Sheets[spreadsheet.SheetNames[0]];
+    let table = XLSX.utils.sheet_to_json(sheet)
+
+    table = table.sort((a, b) =>
+    {
+        return days.indexOf(a.Day) - days.indexOf(b.Day) ||
+            parseInt(a["Start Time"].split(":")[0]) - parseInt(b["Start Time"].split(":")[0])
+    })
+
+
+    timetables.push(table);
+}
+
+document.getElementById("test").addEventListener("change",
+    (params) =>
+    {
+        document.getElementById("test").style.display = "none";
+
+        for (const file of document.getElementById("test").files)
+        {
+            let reader = new FileReader();
+            reader.addEventListener('load', readFile);
+            reader.readAsArrayBuffer(file);
+        }
+    }
+)
