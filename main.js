@@ -1,39 +1,39 @@
-// GA_ESOEG
+// GA_KSOAG_H08
 
 const PrintMode = false;
 const Use24Hour = false;
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday"]
 
 const startTime = 9;
-const endTime = 16;
+const endTime = 17;
 
 let timetables = []
 
 function toModule(name)
 {
-    if (name.includes("DATA CENTRIC WEB APPLICATIONS"))
+    if (name.includes("ADVANCED DATA CENTRIC WEB APPLICATIONS"))
     {
-        return { name: "Data Centric Web Applications", color: "yellow" }
+        return { name: "Adv D.C. Web Applications", color: "yellow" }
     }
-    else if (name.includes("GRAPHICS PROGRAMMING"))
+    else if (name.includes("SOFTWARE TESTING"))
     {
-        return { name: "Graphics Programming", color: "orange" };
+        return { name: "Software Testing", color: "orange" };
     }
-    else if (name.includes("OPERATING SYSTEMS"))
+    else if (name.includes("GRAPH THEORY"))
     {
-        return { name: "Operating Systems", color: "green" };
+        return { name: "Graph Theory", color: "green" };
     }
-    else if (name.includes("DATA REPRESENTATION AND QUERYING"))
+    else if (name.includes("PROFESSIONAL PRACTICE IN IT"))
     {
-        return { name: "Data Rep And Querying", color: "blue" };
+        return { name: "Professional Practice in IT", color: "red" };
     }
-    else if (name.includes("SOFTWARE QUALITY MANAGEMENT"))
+    else if (name.includes("MOBILE APPLICATIONS DEVELOPMENT 2"))
     {
-        return { name: "Software Quality Management", color: "red" };
+        return { name: "Mobile Applications Development 2", color: "blue" };
     }
-    else if (name.includes("OBJECT ORIENTED PROGRAMMING"))
+    else if (name.includes("DATABASE MANAGEMENT SYSTEMS"))
     {
-        return { name: "Object Oriented Programming", color: "pink" };
+        return { name: "Database Management", color: "pink" };
     }
     else
     {
@@ -116,7 +116,7 @@ function RenderGroup(groupIndex)
 
         // Room
         element = document.createElement("h5");
-        element.textContent = data.Location;
+        element.textContent = data.Location.split(" ")[0];
         element.className = "text"
         element.classList.add("flex-grow")
         header.appendChild(element);
@@ -211,51 +211,60 @@ function toType(type)
 
 let i = 0;
 
-document.body.onkeyup = function (e)
-{
-    const spacebar = 32;
-    const enter = 13;
-
-    if (e.keyCode == spacebar)
-    {
-        i++
-        RenderAndSaveGroupTimetable(i)
-    }
-
-    if (e.keyCode == enter)
-    {
-        setTimeout(() => RenderAndSaveGroupTimetable(0), 1000);
-        setTimeout(() => RenderAndSaveGroupTimetable(1), 2000);
-        setTimeout(() => RenderAndSaveGroupTimetable(2), 3000);
-    }
-}
-
 function RenderAndSaveGroupTimetable(i)
 {
+    let root = document.querySelector("#root");
     html2canvas(document.getElementById("root").parentElement, {
         onrendered: function (canvas)
         {
             var tempcanvas = document.createElement('canvas');
-            tempcanvas.width = 1920;
-            tempcanvas.height = 1080;
+            let body = document.querySelector("body")
+            tempcanvas.width = body.clientWidth;
+            tempcanvas.height = body.clientHeight;
             var context = tempcanvas.getContext('2d');
-            context.drawImage(canvas, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+            context.drawImage(canvas, 0, 0, tempcanvas.width, tempcanvas.height, 0, 0, tempcanvas.width, tempcanvas.height);
             var link = document.createElement("a");
-            link.href = tempcanvas.toDataURL('image/jpg');   //function blocks CORS
-            link.download = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase();
+            link.href = tempcanvas.toDataURL('image/png');   //function blocks CORS
+            link.download = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase() + ".png";
             link.click();
         }
     });
     document.querySelector("#Title").textContent = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase()
-    document.querySelector("#root").innerHTML = ""
+    root.innerHTML = ""
     RenderGroup(i % timetables.length)
 }
 
-function readFile(e)
+async function main()
 {
-    const Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    let a = await fetch("./A.xlsx")
+    await loadExcelFile(a)
+    let b = await fetch("./B.xlsx")
+    await loadExcelFile(b)
+    let c = await fetch("./C.xlsx")
+    await loadExcelFile(c)
 
-    let data = e.target.result
+    RenderAndSaveGroupTimetable(i)
+    i++
+    await wait(1000);
+    RenderAndSaveGroupTimetable(i)
+    i++
+    await wait(1000);
+    RenderAndSaveGroupTimetable(i)
+    i++
+
+}
+
+const wait = (ms) =>
+    new Promise((resolve, reject) =>
+        setTimeout(() =>
+        {
+            resolve()
+        }, ms)
+    )
+
+async function loadExcelFile(d)
+{
+    let data = await d.arrayBuffer();
     let spreadsheet = XLSX.read(data);
     let sheet = spreadsheet.Sheets[spreadsheet.SheetNames[0]];
     let table = XLSX.utils.sheet_to_json(sheet)
@@ -266,20 +275,7 @@ function readFile(e)
             parseInt(a["Start Time"].split(":")[0]) - parseInt(b["Start Time"].split(":")[0])
     })
 
-
     timetables.push(table);
 }
 
-document.getElementById("test").addEventListener("change",
-    (params) =>
-    {
-        document.getElementById("test").style.display = "none";
-
-        for (const file of document.getElementById("test").files)
-        {
-            let reader = new FileReader();
-            reader.addEventListener('load', readFile);
-            reader.readAsArrayBuffer(file);
-        }
-    }
-)
+main();
