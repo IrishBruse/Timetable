@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "type": "module"
+}
