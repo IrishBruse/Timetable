@@ -44,6 +44,20 @@ function renameModule(name)
     }
 }
 
+function toType(type)
+{
+    switch (type)
+    {
+        case "P": return "(Practical)"
+        case "L": return "(Lecture)"
+        case "T": return "(Tutorial)"
+        case "S": return "(Seminar)"
+        case "OL": return "(Online)"
+        case "Lab": return "(Lab)"
+        default: return "(Unknown)";
+    }
+}
+
 function parseXLSX(file)
 {
     let data = fs.readFileSync(file)
@@ -72,25 +86,7 @@ function parseXLSX(file)
 
         let moduleInfo = mod.Description.split(title)[1].trim();
         let moduleType = moduleInfo.split("/")[1]// L or P or T
-
-        switch (moduleType)
-        {
-            case "L":
-                mod.Type = "Lecture"
-                break;
-
-            case "P":
-                mod.Type = "Practical"
-                break;
-
-            case "T":
-                mod.Type = "Tutorial"
-                break;
-
-            default:
-                console.log("Unkown module type " + moduleType);
-                break;
-        }
+        moduleType = toType(moduleType)
 
         delete mod["Description"]
 
