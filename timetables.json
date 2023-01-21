@@ -1,503 +1,368 @@
 [
     [
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Monday",
             "Time": "10:00-11:00",
-            "Start Time": "10:00",
-            "End Time": "11:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0941"
+            "Location": "941",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2/L",
+            "Module": "Mobile Applications Development 2",
             "Day": "Monday",
             "Time": "12:00-14:00",
-            "Start Time": "12:00",
-            "End Time": "14:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "blue",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS/L",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "yellow",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 GRP A PROFESSIONAL PRACTICE IN IT/P",
+            "Module": "Professional Practice in IT",
             "Day": "Monday",
             "Time": "16:00-18:00",
-            "Start Time": "16:00",
-            "End Time": "18:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "red",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS Gr A/P",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Tuesday",
             "Time": "09:00-11:00",
-            "Start Time": "09:00",
-            "End Time": "11:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0484 CR1"
+            "Location": "484 CR1",
+            "Color": "yellow",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "1039"
+            "Location": "1039",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2 Gr A/P",
+            "Module": "Mobile Applications Development 2",
             "Day": "Tuesday",
             "Time": "15:00-17:00",
-            "Start Time": "15:00",
-            "End Time": "17:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "blue",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "09:00-10:00",
-            "Start Time": "09:00",
-            "End Time": "10:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0208"
+            "Location": "208",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Wednesday",
             "Time": "11:00-12:00",
-            "Start Time": "11:00",
-            "End Time": "12:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0940"
+            "Location": "940",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "12:00-13:00",
-            "Start Time": "12:00",
-            "End Time": "13:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Wednesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING/L",
+            "Module": "Software Testing",
             "Day": "Wednesday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0939"
+            "Location": "939",
+            "Color": "orange",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING Gr A/P",
+            "Module": "Software Testing",
             "Day": "Wednesday",
             "Time": "16:00-18:00",
-            "Start Time": "16:00",
-            "End Time": "18:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0484 CR1"
+            "Location": "484 CR1",
+            "Color": "orange",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY Gr A/P",
+            "Module": "Graph Theory",
             "Day": "Thursday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0479 CR8"
+            "Location": "479 CR8",
+            "Color": "green",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3 DATABASE MANAGEMENT SYSTEMS Gr A/P",
+            "Module": "Database Management",
             "Day": "Thursday",
             "Time": "15:00-17:00",
-            "Start Time": "15:00",
-            "End Time": "17:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0481 CR4"
+            "Location": "481 CR4",
+            "Color": "pink",
+            "Type": "Practical"
         }
     ],
     [
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Monday",
             "Time": "10:00-11:00",
-            "Start Time": "10:00",
-            "End Time": "11:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0941"
+            "Location": "941",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2/L",
+            "Module": "Mobile Applications Development 2",
             "Day": "Monday",
             "Time": "12:00-14:00",
-            "Start Time": "12:00",
-            "End Time": "14:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "blue",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS/L",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "yellow",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING Gr B/P",
+            "Module": "Software Testing",
             "Day": "Monday",
             "Time": "16:00-18:00",
-            "Start Time": "16:00",
-            "End Time": "18:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0479 CR8"
+            "Location": "479 CR8",
+            "Color": "orange",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 GRP B PROFESSIONAL PRACTICE IN IT/P",
+            "Module": "Professional Practice in IT",
             "Day": "Tuesday",
             "Time": "09:00-11:00",
-            "Start Time": "09:00",
-            "End Time": "11:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "red",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY Gr B/P",
+            "Module": "Graph Theory",
             "Day": "Tuesday",
             "Time": "12:00-13:00",
-            "Start Time": "12:00",
-            "End Time": "13:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0436 CR5"
+            "Location": "436 CR5",
+            "Color": "green",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "1039"
+            "Location": "1039",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS Gr B/P",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Tuesday",
             "Time": "15:00-17:00",
-            "Start Time": "15:00",
-            "End Time": "17:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0436 CR5"
+            "Location": "436 CR5",
+            "Color": "yellow",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "09:00-10:00",
-            "Start Time": "09:00",
-            "End Time": "10:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0208"
+            "Location": "208",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Wednesday",
             "Time": "11:00-12:00",
-            "Start Time": "11:00",
-            "End Time": "12:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0940"
+            "Location": "940",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "12:00-13:00",
-            "Start Time": "12:00",
-            "End Time": "13:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Wednesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING/L",
+            "Module": "Software Testing",
             "Day": "Wednesday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0939"
+            "Location": "939",
+            "Color": "orange",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2 Gr B/P",
+            "Module": "Mobile Applications Development 2",
             "Day": "Thursday",
             "Time": "09:00-11:00",
-            "Start Time": "09:00",
-            "End Time": "11:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "blue",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3 DATABASE MANAGEMENT SYSTEMS Gr B/P",
+            "Module": "Database Management",
             "Day": "Thursday",
             "Time": "12:00-14:00",
-            "Start Time": "12:00",
-            "End Time": "14:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0484 CR1"
+            "Location": "484 CR1",
+            "Color": "pink",
+            "Type": "Practical"
         }
     ],
     [
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Monday",
             "Time": "10:00-11:00",
-            "Start Time": "10:00",
-            "End Time": "11:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0941"
+            "Location": "941",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2/L",
+            "Module": "Mobile Applications Development 2",
             "Day": "Monday",
             "Time": "12:00-14:00",
-            "Start Time": "12:00",
-            "End Time": "14:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "blue",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS/L",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "yellow",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3 DATABASE MANAGEMENT SYSTEMS Gr C/P",
+            "Module": "Database Management",
             "Day": "Monday",
             "Time": "16:00-18:00",
-            "Start Time": "16:00",
-            "End Time": "18:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0436 CR5"
+            "Location": "436 CR5",
+            "Color": "pink",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING Gr C/P",
+            "Module": "Software Testing",
             "Day": "Tuesday",
             "Time": "09:00-11:00",
-            "Start Time": "09:00",
-            "End Time": "11:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0479 CR8"
+            "Location": "479 CR8",
+            "Color": "orange",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY Gr C/P",
+            "Module": "Graph Theory",
             "Day": "Tuesday",
             "Time": "11:00-12:00",
-            "Start Time": "11:00",
-            "End Time": "12:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "green",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "1039"
+            "Location": "1039",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "09:00-10:00",
-            "Start Time": "09:00",
-            "End Time": "10:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0208"
+            "Location": "208",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07050 GRAPH THEORY",
-            "Description": "KSOFG3 GRAPH THEORY/L",
+            "Module": "Graph Theory",
             "Day": "Wednesday",
             "Time": "11:00-12:00",
-            "Start Time": "11:00",
-            "End Time": "12:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0940"
+            "Location": "940",
+            "Color": "green",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 PROFESSIONAL PRACTICE IN IT/L",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "12:00-13:00",
-            "Start Time": "12:00",
-            "End Time": "13:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "red",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07020 DATABASE MANAGEMENT SYSTEMS",
-            "Description": "KSOFG3/KCDMG3 DATABASE MANAGEMENT SYSTEMS/L",
+            "Module": "Database Management",
             "Day": "Wednesday",
             "Time": "13:00-14:00",
-            "Start Time": "13:00",
-            "End Time": "14:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0996"
+            "Location": "996",
+            "Color": "pink",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP08034 SOFTWARE TESTING",
-            "Description": "KSOFG3 SOFTWARE TESTING/L",
+            "Module": "Software Testing",
             "Day": "Wednesday",
             "Time": "15:00-16:00",
-            "Start Time": "15:00",
-            "End Time": "16:00",
-            "Duration": " 1h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0939"
+            "Location": "939",
+            "Color": "orange",
+            "Type": "Lecture"
         },
         {
-            "Module": "COMP07030 PROFESSIONAL PRACTICE IN IT",
-            "Description": "KSOFG3 GRP C PROFESSIONAL PRACTICE IN IT/P",
+            "Module": "Professional Practice in IT",
             "Day": "Wednesday",
             "Time": "16:00-18:00",
-            "Start Time": "16:00",
-            "End Time": "18:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "red",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07029 MOBILE APPLICATIONS DEVELOPMENT 2",
-            "Description": "KSOFG3 MOBILE APPLICATIONS DEVELOPMENT 2 Gr C/P",
+            "Module": "Mobile Applications Development 2",
             "Day": "Thursday",
             "Time": "12:00-14:00",
-            "Start Time": "12:00",
-            "End Time": "14:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0470 Computing Practical Lab (BYOD)"
+            "Location": "470",
+            "Color": "blue",
+            "Type": "Practical"
         },
         {
-            "Module": "COMP07081 ADVANCED DATA CENTRIC WEB APPLICATIONS",
-            "Description": "KSOFG3 ADVANCED DATA CENTRIC WEB APPLICATIONS Gr C/P",
+            "Module": "Adv D.C. Web Applications",
             "Day": "Thursday",
             "Time": "15:00-17:00",
-            "Start Time": "15:00",
-            "End Time": "17:00",
-            "Duration": " 2h",
-            "Weeks": "22-31, 34-36",
-            "Location": "0483 CR2"
+            "Location": "483 CR2",
+            "Color": "yellow",
+            "Type": "Practical"
         }
     ]
 ]
