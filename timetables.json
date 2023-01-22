@@ -3,366 +3,366 @@
         {
             "Module": "Database Management",
             "Day": "Monday",
-            "Time": "10:00-11:00",
+            "Time": "10-11",
             "Location": "941",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Monday",
-            "Time": "12:00-14:00",
+            "Time": "12-14",
             "Location": "996",
             "Color": "blue",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "996",
             "Color": "yellow",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Monday",
-            "Time": "16:00-18:00",
+            "Time": "16-18",
             "Location": "470",
             "Color": "red",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Tuesday",
-            "Time": "09:00-11:00",
+            "Time": "09-11",
             "Location": "484 CR1",
             "Color": "yellow",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Tuesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "1039",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Tuesday",
-            "Time": "15:00-17:00",
+            "Time": "15-17",
             "Location": "470",
             "Color": "blue",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "09:00-10:00",
+            "Time": "09-10",
             "Location": "208",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Wednesday",
-            "Time": "11:00-12:00",
+            "Time": "11-12",
             "Location": "940",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "12:00-13:00",
+            "Time": "12-13",
             "Location": "996",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Database Management",
             "Day": "Wednesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "996",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Software Testing",
             "Day": "Wednesday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "939",
             "Color": "orange",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Software Testing",
             "Day": "Wednesday",
-            "Time": "16:00-18:00",
+            "Time": "16-18",
             "Location": "484 CR1",
             "Color": "orange",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Thursday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "479 CR8",
             "Color": "green",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Database Management",
             "Day": "Thursday",
-            "Time": "15:00-17:00",
+            "Time": "15-17",
             "Location": "481 CR4",
             "Color": "pink",
-            "Type": "Practical"
+            "Type": "(Practical)"
         }
     ],
     [
         {
             "Module": "Database Management",
             "Day": "Monday",
-            "Time": "10:00-11:00",
+            "Time": "10-11",
             "Location": "941",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Monday",
-            "Time": "12:00-14:00",
+            "Time": "12-14",
             "Location": "996",
             "Color": "blue",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "996",
             "Color": "yellow",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Software Testing",
             "Day": "Monday",
-            "Time": "16:00-18:00",
+            "Time": "16-18",
             "Location": "479 CR8",
             "Color": "orange",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Tuesday",
-            "Time": "09:00-11:00",
+            "Time": "09-11",
             "Location": "470",
             "Color": "red",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Tuesday",
-            "Time": "12:00-13:00",
+            "Time": "12-13",
             "Location": "436 CR5",
             "Color": "green",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Tuesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "1039",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Tuesday",
-            "Time": "15:00-17:00",
+            "Time": "15-17",
             "Location": "436 CR5",
             "Color": "yellow",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "09:00-10:00",
+            "Time": "09-10",
             "Location": "208",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Wednesday",
-            "Time": "11:00-12:00",
+            "Time": "11-12",
             "Location": "940",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "12:00-13:00",
+            "Time": "12-13",
             "Location": "996",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Database Management",
             "Day": "Wednesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "996",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Software Testing",
             "Day": "Wednesday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "939",
             "Color": "orange",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Thursday",
-            "Time": "09:00-11:00",
+            "Time": "09-11",
             "Location": "470",
             "Color": "blue",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Database Management",
             "Day": "Thursday",
-            "Time": "12:00-14:00",
+            "Time": "12-14",
             "Location": "484 CR1",
             "Color": "pink",
-            "Type": "Practical"
+            "Type": "(Practical)"
         }
     ],
     [
         {
             "Module": "Database Management",
             "Day": "Monday",
-            "Time": "10:00-11:00",
+            "Time": "10-11",
             "Location": "941",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Monday",
-            "Time": "12:00-14:00",
+            "Time": "12-14",
             "Location": "996",
             "Color": "blue",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Monday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "996",
             "Color": "yellow",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Database Management",
             "Day": "Monday",
-            "Time": "16:00-18:00",
+            "Time": "16-18",
             "Location": "436 CR5",
             "Color": "pink",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Software Testing",
             "Day": "Tuesday",
-            "Time": "09:00-11:00",
+            "Time": "09-11",
             "Location": "479 CR8",
             "Color": "orange",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Tuesday",
-            "Time": "11:00-12:00",
+            "Time": "11-12",
             "Location": "470",
             "Color": "green",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Tuesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "1039",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "09:00-10:00",
+            "Time": "09-10",
             "Location": "208",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Graph Theory",
             "Day": "Wednesday",
-            "Time": "11:00-12:00",
+            "Time": "11-12",
             "Location": "940",
             "Color": "green",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "12:00-13:00",
+            "Time": "12-13",
             "Location": "996",
             "Color": "red",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Database Management",
             "Day": "Wednesday",
-            "Time": "13:00-14:00",
+            "Time": "13-14",
             "Location": "996",
             "Color": "pink",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Software Testing",
             "Day": "Wednesday",
-            "Time": "15:00-16:00",
+            "Time": "15-16",
             "Location": "939",
             "Color": "orange",
-            "Type": "Lecture"
+            "Type": "(Lecture)"
         },
         {
             "Module": "Professional Practice in IT",
             "Day": "Wednesday",
-            "Time": "16:00-18:00",
+            "Time": "16-18",
             "Location": "470",
             "Color": "red",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Mobile Applications Development 2",
             "Day": "Thursday",
-            "Time": "12:00-14:00",
+            "Time": "12-14",
             "Location": "470",
             "Color": "blue",
-            "Type": "Practical"
+            "Type": "(Practical)"
         },
         {
             "Module": "Adv D.C. Web Applications",
             "Day": "Thursday",
-            "Time": "15:00-17:00",
+            "Time": "15-17",
             "Location": "483 CR2",
             "Color": "yellow",
-            "Type": "Practical"
+            "Type": "(Practical)"
         }
     ]
 ]

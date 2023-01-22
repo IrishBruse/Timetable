@@ -1,178 +1,161 @@
 // GA_KSOAG_H08
 
-const PrintMode = false;
-const Use24Hour = false;
+const START_TIME = 9;// 9 am
+const END_TIME = 18;// 6pm
+const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-const startTime = 9;
-const endTime = 17;
-
-let timetables = []
-
-
-function RenderGroup(groupIndex)
+function CreateTimetableHtml(data, letter)
 {
-    var body = document.getElementById("root");
-    var groupTimetable = document.createElement("div");
-    groupTimetable.classList.add("Group");
+    let body = document.getElementById("root")
+    let group = document.createElement("div")
 
-    body.appendChild(groupTimetable);
 
-    var hours = document.createElement("div");
-    hours.className = "moduleRow";
-    addColumnTemplates(hours)
-    for (let i = startTime; i <= endTime; i++)
+    let timetable = document.createElement("div");
+    timetable.classList.add("Timetable");
+
+    addTime(timetable)
+
+    addColumnTemplates(timetable);
+    addRowTemplates(timetable);
+
+    for (let i = 0; i < 5; i++)
     {
-        var div = document.createElement("div");
-        var time = document.createElement("h2");
-        time.className = "time";
-        time.classList.add("text")
-        if (Use24Hour)
+        addDayHeader(i, timetable);
+
+        for (const mod of data.filter(d => DAYS_OF_WEEK[i] == d.Day))
         {
-            time.textContent = i + ":00";
+            console.log(mod);
+
+            let node = document.createElement("div")
+            node.classList.add("Module")
+
+            let times = mod.Time.split("-");
+            times[0] = Number.parseInt(times[0]) - START_TIME + 1;
+            times[1] = Number.parseInt(times[1]) - START_TIME + 1;
+            node.style.gridColumn = times.join(" / ")
+
+            addModule(node, mod);
+
+            timetable.appendChild(node)
         }
-        else
-        {
-            time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i > 12 ? " pm" : " am");
-        }
-        div.appendChild(time)
-        hours.appendChild(div)
     }
 
-    groupTimetable.appendChild(hours);
+    addGroupTitle(letter, group);
 
+    group.appendChild(timetable)
 
-    var modules = timetables[groupIndex];
-    var daysModules;
+    group.id = letter;
+    group.classList.add("Group");
 
-    let lastDay = ""
+    body.appendChild(group);
 
-    for (let i = 0; i < modules.length; i++)
+    html2canvas(group, {
+        onrendered: function (canvas)
+        {
+            var tempcanvas = document.createElement('canvas');
+            tempcanvas.width = group.clientWidth;
+            tempcanvas.height = group.clientHeight;
+            var context = tempcanvas.getContext('2d');
+            context.drawImage(canvas, 0, 0, tempcanvas.width, tempcanvas.height, 0, 0, tempcanvas.width, tempcanvas.height);
+            var link = document.createElement("a");
+            link.href = tempcanvas.toDataURL('image/png');   //function blocks CORS
+            link.download = "Group " + letter + ".png";
+            link.click();
+        }
+    });
+}
+
+function addDayHeader(i, timetable)
+{
+    let node = document.createElement("h2");
+    node.classList.add("text-center", "day-title");
+    node.textContent = DAYS_OF_WEEK[i];
+    timetable.appendChild(node);
+}
+
+function addGroupTitle(letter, group)
+{
+    let groupTitle = document.createElement("h1");
+    groupTitle.textContent = "Group " + letter;
+    groupTitle.classList.add("Title");
+    group.appendChild(groupTitle);
+}
+
+function addModule(module, mod)
+{
+    module.classList.add(mod.Color);
+
+    let headerContainer = document.createElement("div")
+    let container = document.createElement("div")
+    let moduleName = document.createElement("h1")
+
+    moduleName.textContent = mod.Module;
+    moduleName.classList.add("moduleName")
+
+    container.classList.add("container")
+
+    headerContainer.classList.add("title-header")
+
+    headerContainer.appendChild(h3(mod.Location))
+    headerContainer.appendChild(h3(mod.Type))
+
+    module.appendChild(headerContainer)
+    container.appendChild(moduleName)
+    module.appendChild(container)
+}
+
+function h3(content, ...classes)
+{
+    let node = document.createElement("h3")
+    node.textContent = content;
+    node.classList = classes
+    return node;
+}
+
+function addTime(group)
+{
+    for (let i = START_TIME; i < END_TIME; i++)
     {
-        var data = modules[i];
-        console.log(data);
-
-        if (lastDay != data.Day)
-        {
-            var title = document.createElement("h3");
-            title.className = "dayTitle";
-            title.innerText = data.Day;
-            groupTimetable.appendChild(title);
-
-            daysModules = document.createElement("div");
-            daysModules.className = "moduleRow"
-            addColumnTemplates(daysModules);
-
-            groupTimetable.appendChild(daysModules);
-        }
-
-        var header = document.createElement("div");
-        header.className = "moduleTop";
-
-        var middle = document.createElement("div");
-        middle.className = "moduleMiddle";
-
-        var footer = document.createElement("div");
-        footer.className = "moduleBottom";
-
-        // Name
-        var element = document.createElement("h3");
-        var mod = toModule(data.Module);
-        element.textContent = mod.name;
-        element.className = "center";
-        middle.appendChild(element);
-
-        // Room
-        element = document.createElement("h5");
-        element.textContent = data.Location.split(" ")[0];
-        element.className = "text"
-        element.classList.add("flex-grow")
-        header.appendChild(element);
-
-        // Type
-        element = document.createElement("h5");
-        element.textContent = toType(data.Description.split("/")[1]);
-        element.classList.add("text");
-        element.classList.add("moduleType");
-        header.appendChild(element);
-
-        // Start
-        var start = Number(data["Start Time"].split(":")[0]) - 8;
-        var end = Number(data["End Time"].split(":")[0]) - 8;
-
-        // Lecturer
-        element = document.createElement("h5");
-        element.textContent = data[8];
-        element.className = "text"
-        footer.appendChild(element);
-
-        // Module
-        let module = document.createElement("div");
-        module.className = "module";
-
-        module.style.gridColumnStart = start;
-        module.style.gridColumnEnd = end;
-
-        if (PrintMode)
-        {
-            module.classList.add("print");
-        }
-        else
-        {
-            module.classList.add(mod.color);
-        }
-
-        module.appendChild(header);
-        module.appendChild(middle);
-        module.appendChild(footer);
-        daysModules.appendChild(module);
-
-        lastDay = data.Day;
+        var time = document.createElement("h2");
+        time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i >= 12 ? " pm" : " am");
+        time.classList.add("text-center");
+        group.appendChild(time)
     }
 }
 
 function addColumnTemplates(element)
 {
     let frs = ""
-    for (let i = 0; i <= (endTime - startTime); i++)
+    for (let i = 0; i < (END_TIME - START_TIME); i++)
     {
         frs += "1fr ";
     }
-    element.style.gridTemplateColumns = frs;
 
+    element.style.gridTemplateColumns = frs;
 }
 
-let i = 0;
-
-function RenderAndSaveGroupTimetable(i)
+function addRowTemplates(element)
 {
-    let root = document.querySelector("#root");
-    html2canvas(document.getElementById("root").parentElement, {
-        onrendered: function (canvas)
-        {
-            var tempcanvas = document.createElement('canvas');
-            let body = document.querySelector("body")
-            tempcanvas.width = body.clientWidth;
-            tempcanvas.height = body.clientHeight;
-            var context = tempcanvas.getContext('2d');
-            context.drawImage(canvas, 0, 0, tempcanvas.width, tempcanvas.height, 0, 0, tempcanvas.width, tempcanvas.height);
-            var link = document.createElement("a");
-            link.href = tempcanvas.toDataURL('image/png');   //function blocks CORS
-            link.download = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase() + ".png";
-            link.click();
-        }
-    });
-    document.querySelector("#Title").textContent = "Group " + String.fromCharCode(((i % timetables.length) + 97)).toUpperCase()
-    root.innerHTML = ""
-    RenderGroup(i % timetables.length)
+    let frs = "2rem "// for the time row
+    for (let i = 0; i < 5; i++)
+    {
+        frs += "2rem ";
+        frs += "1fr ";
+    }
+
+    element.style.gridTemplateRows = frs;
 }
 
 async function main()
 {
     let data = await fetch("./timetables.json")
-    timetables = await data.json()
-    RenderAndSaveGroupTimetable(++i)
-    RenderAndSaveGroupTimetable(++i)
-    RenderAndSaveGroupTimetable(++i)
+    let timetables = await data.json()
+
+    for (let i = 0; i < timetables.length; i++)
+    {
+        let groupLetter = String.fromCharCode(((i % timetables.length) + 97)).toUpperCase();
+        CreateTimetableHtml(timetables[i], groupLetter)
+    }
 }
 
 main();

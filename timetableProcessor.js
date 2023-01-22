@@ -3,7 +3,7 @@ import * as fs from "fs";
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-let timetables = fetch;
+let timetables = [];
 
 [
     "./A.xlsx",
@@ -78,6 +78,8 @@ function parseXLSX(file)
         delete mod["Duration"]
         delete mod["Weeks"]
 
+        mod.Time = mod.Time.replaceAll(":00", "");
+
         let title = mod.Module;
         title = title.substring(title.indexOf(' ') + 1);
         let newModule = renameModule(title);
@@ -87,6 +89,7 @@ function parseXLSX(file)
         let moduleInfo = mod.Description.split(title)[1].trim();
         let moduleType = moduleInfo.split("/")[1]// L or P or T
         moduleType = toType(moduleType)
+        mod.Type = moduleType;
 
         delete mod["Description"]
 
