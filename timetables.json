@@ -1,368 +1,294 @@
 [
     [
         {
-            "Module": "Database Management",
+            "Staff": "DOMINIC CARR",
             "Day": "Monday",
-            "Time": "10-11",
-            "Location": "941",
-            "Color": "pink",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Mobile Applications Development 2",
-            "Day": "Monday",
-            "Time": "12-14",
-            "Location": "996",
-            "Color": "blue",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Adv D.C. Web Applications",
-            "Day": "Monday",
-            "Time": "15-16",
-            "Location": "996",
+            "Time": "09:00-10:00",
+            "Module": "Research Methods in IT",
             "Color": "yellow",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0165"
         },
         {
-            "Module": "Professional Practice in IT",
+            "Staff": "DOMINIC CARR",
             "Day": "Monday",
-            "Time": "16-18",
-            "Location": "470",
-            "Color": "red",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Adv D.C. Web Applications",
-            "Day": "Tuesday",
-            "Time": "09-11",
-            "Location": "484 CR1",
+            "Time": "10:00-11:00",
+            "Module": "Research Methods in IT",
             "Color": "yellow",
-            "Type": "(Practical)"
+            "Type": "(Lecture)",
+            "Location": "PF07"
         },
         {
-            "Module": "Graph Theory",
-            "Day": "Tuesday",
-            "Time": "13-14",
-            "Location": "1039",
+            "Staff": "JOHN HEALY",
+            "Day": "Monday",
+            "Time": "12:00-13:00",
+            "Module": "Applied Project",
+            "Color": "orange",
+            "Type": "(Lecture)",
+            "Location": "0364"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Monday",
+            "Time": "13:00-14:00",
+            "Module": "Emerging Technologies",
             "Color": "green",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "PF07"
         },
         {
-            "Module": "Mobile Applications Development 2",
-            "Day": "Tuesday",
-            "Time": "15-17",
-            "Location": "470",
+            "Staff": "DAMIEN COSTELLO",
+            "Day": "Monday",
+            "Time": "14:00-16:00",
+            "Module": "Mobile App Dev 3",
             "Color": "blue",
-            "Type": "(Practical)"
+            "Type": "(Practical)",
+            "Location": "0470"
         },
         {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "09-10",
-            "Location": "208",
+            "Staff": "JOHN FRENCH",
+            "Day": "Tuesday",
+            "Time": "11:00-12:00",
+            "Module": "Distributed Systems",
             "Color": "red",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0365"
         },
         {
-            "Module": "Graph Theory",
-            "Day": "Wednesday",
-            "Time": "11-12",
-            "Location": "940",
-            "Color": "green",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "12-13",
-            "Location": "996",
+            "Staff": "JOHN FRENCH",
+            "Day": "Tuesday",
+            "Time": "12:00-13:00",
+            "Module": "Distributed Systems",
             "Color": "red",
-            "Type": "(Lecture)"
+            "Type": "(Practical)",
+            "Location": "0470"
         },
         {
-            "Module": "Database Management",
+            "Staff": "DAMIEN COSTELLO",
+            "Day": "Tuesday",
+            "Time": "13:00-14:00",
+            "Module": "Mobile App Dev 3",
+            "Color": "blue",
+            "Type": "(Lecture)",
+            "Location": "0364"
+        },
+        {
+            "Staff": "JOHN HEALY",
             "Day": "Wednesday",
-            "Time": "13-14",
-            "Location": "996",
+            "Time": "09:00-10:00",
+            "Module": "Advanced OOP",
             "Color": "pink",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0938"
         },
         {
-            "Module": "Software Testing",
-            "Day": "Wednesday",
-            "Time": "15-16",
-            "Location": "939",
-            "Color": "orange",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Software Testing",
-            "Day": "Wednesday",
-            "Time": "16-18",
-            "Location": "484 CR1",
-            "Color": "orange",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Graph Theory",
+            "Staff": "DOMINIC CARR",
             "Day": "Thursday",
-            "Time": "13-14",
-            "Location": "479 CR8",
+            "Time": "09:00-10:00",
+            "Module": "Research Methods in IT",
+            "Color": "yellow",
+            "Type": "(Lecture)",
+            "Location": "0903"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Thursday",
+            "Time": "10:00-12:00",
+            "Module": "Emerging Technologies",
             "Color": "green",
-            "Type": "(Practical)"
+            "Type": "(Practical)",
+            "Location": "0470"
         },
         {
-            "Module": "Database Management",
+            "Staff": "JOHN FRENCH",
             "Day": "Thursday",
-            "Time": "15-17",
-            "Location": "481 CR4",
+            "Time": "14:00-15:00",
+            "Module": "Distributed Systems",
+            "Color": "red",
+            "Type": "(Lecture)",
+            "Location": "1000"
+        },
+        {
+            "Staff": "DAMIEN COSTELLO",
+            "Day": "Thursday",
+            "Time": "16:00-17:00",
+            "Module": "Mobile App Dev 3",
+            "Color": "blue",
+            "Type": "(Lecture)",
+            "Location": "0209"
+        },
+        {
+            "Staff": "JOHN HEALY",
+            "Day": "Friday",
+            "Time": "09:00-10:00",
+            "Module": "Advanced OOP",
             "Color": "pink",
-            "Type": "(Practical)"
+            "Type": "(Lecture)",
+            "Location": "1039"
+        },
+        {
+            "Staff": "JOHN HEALY",
+            "Day": "Friday",
+            "Time": "10:00-12:00",
+            "Module": "Advanced OOP",
+            "Color": "pink",
+            "Type": "(Practical)",
+            "Location": "0482"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Friday",
+            "Time": "12:00-13:00",
+            "Module": "Emerging Technologies",
+            "Color": "green",
+            "Type": "(Lecture)",
+            "Location": "0366"
         }
     ],
     [
         {
-            "Module": "Database Management",
+            "Staff": "DOMINIC CARR",
             "Day": "Monday",
-            "Time": "10-11",
-            "Location": "941",
-            "Color": "pink",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Mobile Applications Development 2",
-            "Day": "Monday",
-            "Time": "12-14",
-            "Location": "996",
-            "Color": "blue",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Adv D.C. Web Applications",
-            "Day": "Monday",
-            "Time": "15-16",
-            "Location": "996",
+            "Time": "09:00-10:00",
+            "Module": "Research Methods in IT",
             "Color": "yellow",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0165"
         },
         {
-            "Module": "Software Testing",
+            "Staff": "DOMINIC CARR",
             "Day": "Monday",
-            "Time": "16-18",
-            "Location": "479 CR8",
-            "Color": "orange",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Tuesday",
-            "Time": "09-11",
-            "Location": "470",
-            "Color": "red",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Tuesday",
-            "Time": "12-13",
-            "Location": "436 CR5",
-            "Color": "green",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Tuesday",
-            "Time": "13-14",
-            "Location": "1039",
-            "Color": "green",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Adv D.C. Web Applications",
-            "Day": "Tuesday",
-            "Time": "15-17",
-            "Location": "436 CR5",
+            "Time": "10:00-11:00",
+            "Module": "Research Methods in IT",
             "Color": "yellow",
-            "Type": "(Practical)"
+            "Type": "(Lecture)",
+            "Location": "PF07"
         },
         {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "09-10",
-            "Location": "208",
-            "Color": "red",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Wednesday",
-            "Time": "11-12",
-            "Location": "940",
-            "Color": "green",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "12-13",
-            "Location": "996",
-            "Color": "red",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Database Management",
-            "Day": "Wednesday",
-            "Time": "13-14",
-            "Location": "996",
-            "Color": "pink",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Software Testing",
-            "Day": "Wednesday",
-            "Time": "15-16",
-            "Location": "939",
+            "Staff": "JOHN HEALY",
+            "Day": "Monday",
+            "Time": "12:00-13:00",
+            "Module": "Applied Project",
             "Color": "orange",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0364"
         },
         {
-            "Module": "Mobile Applications Development 2",
-            "Day": "Thursday",
-            "Time": "09-11",
-            "Location": "470",
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Monday",
+            "Time": "13:00-14:00",
+            "Module": "Emerging Technologies",
+            "Color": "green",
+            "Type": "(Lecture)",
+            "Location": "PF07"
+        },
+        {
+            "Staff": "JOHN FRENCH",
+            "Day": "Tuesday",
+            "Time": "11:00-12:00",
+            "Module": "Distributed Systems",
+            "Color": "red",
+            "Type": "(Lecture)",
+            "Location": "0365"
+        },
+        {
+            "Staff": "DAMIEN COSTELLO",
+            "Day": "Tuesday",
+            "Time": "13:00-14:00",
+            "Module": "Mobile App Dev 3",
             "Color": "blue",
-            "Type": "(Practical)"
+            "Type": "(Lecture)",
+            "Location": "0364"
         },
         {
-            "Module": "Database Management",
+            "Staff": "JOHN HEALY",
+            "Day": "Wednesday",
+            "Time": "09:00-10:00",
+            "Module": "Advanced OOP",
+            "Color": "pink",
+            "Type": "(Lecture)",
+            "Location": "0938"
+        },
+        {
+            "Staff": "JOHN HEALY",
+            "Day": "Wednesday",
+            "Time": "11:00-13:00",
+            "Module": "Advanced OOP",
+            "Color": "pink",
+            "Type": "(Practical)",
+            "Location": "0480"
+        },
+        {
+            "Staff": "JOHN FRENCH",
+            "Day": "Wednesday",
+            "Time": "13:00-14:00",
+            "Module": "Distributed Systems",
+            "Color": "red",
+            "Type": "(Practical)",
+            "Location": "0470"
+        },
+        {
+            "Staff": "DOMINIC CARR",
             "Day": "Thursday",
-            "Time": "12-14",
-            "Location": "484 CR1",
-            "Color": "pink",
-            "Type": "(Practical)"
-        }
-    ],
-    [
-        {
-            "Module": "Database Management",
-            "Day": "Monday",
-            "Time": "10-11",
-            "Location": "941",
-            "Color": "pink",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Mobile Applications Development 2",
-            "Day": "Monday",
-            "Time": "12-14",
-            "Location": "996",
-            "Color": "blue",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Adv D.C. Web Applications",
-            "Day": "Monday",
-            "Time": "15-16",
-            "Location": "996",
+            "Time": "09:00-10:00",
+            "Module": "Research Methods in IT",
             "Color": "yellow",
-            "Type": "(Lecture)"
+            "Type": "(Lecture)",
+            "Location": "0903"
         },
         {
-            "Module": "Database Management",
-            "Day": "Monday",
-            "Time": "16-18",
-            "Location": "436 CR5",
-            "Color": "pink",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Software Testing",
-            "Day": "Tuesday",
-            "Time": "09-11",
-            "Location": "479 CR8",
-            "Color": "orange",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Tuesday",
-            "Time": "11-12",
-            "Location": "470",
-            "Color": "green",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Tuesday",
-            "Time": "13-14",
-            "Location": "1039",
-            "Color": "green",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "09-10",
-            "Location": "208",
-            "Color": "red",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Graph Theory",
-            "Day": "Wednesday",
-            "Time": "11-12",
-            "Location": "940",
-            "Color": "green",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "12-13",
-            "Location": "996",
-            "Color": "red",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Database Management",
-            "Day": "Wednesday",
-            "Time": "13-14",
-            "Location": "996",
-            "Color": "pink",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Software Testing",
-            "Day": "Wednesday",
-            "Time": "15-16",
-            "Location": "939",
-            "Color": "orange",
-            "Type": "(Lecture)"
-        },
-        {
-            "Module": "Professional Practice in IT",
-            "Day": "Wednesday",
-            "Time": "16-18",
-            "Location": "470",
-            "Color": "red",
-            "Type": "(Practical)"
-        },
-        {
-            "Module": "Mobile Applications Development 2",
+            "Staff": "DAMIEN COSTELLO",
             "Day": "Thursday",
-            "Time": "12-14",
-            "Location": "470",
+            "Time": "10:00-12:00",
+            "Module": "Mobile App Dev 3",
             "Color": "blue",
-            "Type": "(Practical)"
+            "Type": "(Practical)",
+            "Location": "0370"
         },
         {
-            "Module": "Adv D.C. Web Applications",
+            "Staff": "JOHN FRENCH",
             "Day": "Thursday",
-            "Time": "15-17",
-            "Location": "483 CR2",
-            "Color": "yellow",
-            "Type": "(Practical)"
+            "Time": "14:00-15:00",
+            "Module": "Distributed Systems",
+            "Color": "red",
+            "Type": "(Lecture)",
+            "Location": "1000"
+        },
+        {
+            "Staff": "DAMIEN COSTELLO",
+            "Day": "Thursday",
+            "Time": "16:00-17:00",
+            "Module": "Mobile App Dev 3",
+            "Color": "blue",
+            "Type": "(Lecture)",
+            "Location": "0209"
+        },
+        {
+            "Staff": "JOHN HEALY",
+            "Day": "Friday",
+            "Time": "09:00-10:00",
+            "Module": "Advanced OOP",
+            "Color": "pink",
+            "Type": "(Lecture)",
+            "Location": "1039"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Friday",
+            "Time": "10:00-12:00",
+            "Module": "Emerging Technologies",
+            "Color": "green",
+            "Type": "(Practical)",
+            "Location": "0470"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Friday",
+            "Time": "12:00-13:00",
+            "Module": "Emerging Technologies",
+            "Color": "green",
+            "Type": "(Lecture)",
+            "Location": "0366"
         }
     ]
 ]

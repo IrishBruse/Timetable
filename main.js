@@ -1,144 +1,143 @@
 // GA_KSOAG_H08
 
-const START_TIME = 9;// 9 am
-const END_TIME = 18;// 6pm
+const START_TIME = 9; // 9 am
+const END_TIME = 18; // 6pm
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-function CreateTimetableHtml(data, letter)
-{
-    let body = document.getElementById("root")
-    let group = document.createElement("div")
-
+function CreateTimetableHtml(data, letter) {
+    let body = document.getElementById("root");
+    let group = document.createElement("div");
 
     let timetable = document.createElement("div");
     timetable.classList.add("Timetable");
 
-    addTime(timetable)
+    addTime(timetable);
 
     addColumnTemplates(timetable);
     addRowTemplates(timetable);
 
-    for (let i = 0; i < 5; i++)
-    {
+    for (let i = 0; i < 5; i++) {
         addDayHeader(i, timetable);
 
-        for (const mod of data.filter(d => DAYS_OF_WEEK[i] == d.Day))
-        {
-            console.log(mod);
-
-            let node = document.createElement("div")
-            node.classList.add("Module")
+        for (const mod of data.filter((d) => DAYS_OF_WEEK[i] == d.Day)) {
+            let node = document.createElement("div");
+            node.classList.add("Module");
 
             let times = mod.Time.split("-");
             times[0] = Number.parseInt(times[0]) - START_TIME + 1;
             times[1] = Number.parseInt(times[1]) - START_TIME + 1;
-            node.style.gridColumn = times.join(" / ")
+            node.style.gridColumn = times.join(" / ");
 
             addModule(node, mod);
 
-            timetable.appendChild(node)
+            timetable.appendChild(node);
         }
     }
 
     addGroupTitle(letter, group);
 
-    group.appendChild(timetable)
+    group.appendChild(timetable);
 
     group.id = letter;
     group.classList.add("Group");
 
     body.appendChild(group);
 
-    html2canvas(group, {
-        onrendered: function (canvas)
-        {
-            var tempcanvas = document.createElement('canvas');
-            tempcanvas.width = group.clientWidth;
-            tempcanvas.height = group.clientHeight;
-            var context = tempcanvas.getContext('2d');
-            context.drawImage(canvas, 0, 0, tempcanvas.width, tempcanvas.height, 0, 0, tempcanvas.width, tempcanvas.height);
-            var link = document.createElement("a");
-            link.href = tempcanvas.toDataURL('image/png');   //function blocks CORS
-            link.download = "Group " + letter + ".png";
-            link.click();
-        }
-    });
+    setTimeout(
+        html2canvas(group, {
+            onrendered: function (canvas) {
+                var tempcanvas = document.createElement("canvas");
+                tempcanvas.width = group.clientWidth;
+                tempcanvas.height = group.clientHeight;
+                var context = tempcanvas.getContext("2d");
+                context.drawImage(
+                    canvas,
+                    0,
+                    0,
+                    tempcanvas.width,
+                    tempcanvas.height,
+                    0,
+                    0,
+                    tempcanvas.width,
+                    tempcanvas.height
+                );
+                var link = document.createElement("a");
+                link.href = tempcanvas.toDataURL("image/png"); //function blocks CORS
+                link.download = "Group " + letter + ".png";
+                link.click();
+            },
+        }),
+        1
+    );
 }
 
-function addDayHeader(i, timetable)
-{
+function addDayHeader(i, timetable) {
     let node = document.createElement("h2");
     node.classList.add("text-center", "day-title");
     node.textContent = DAYS_OF_WEEK[i];
     timetable.appendChild(node);
 }
 
-function addGroupTitle(letter, group)
-{
+function addGroupTitle(letter, group) {
     let groupTitle = document.createElement("h1");
     groupTitle.textContent = "Group " + letter;
     groupTitle.classList.add("Title");
     group.appendChild(groupTitle);
 }
 
-function addModule(module, mod)
-{
+function addModule(module, mod) {
     module.classList.add(mod.Color);
 
-    let headerContainer = document.createElement("div")
-    let container = document.createElement("div")
-    let moduleName = document.createElement("h1")
+    let headerContainer = document.createElement("div");
+    let container = document.createElement("div");
+    let footerContainer = document.createElement("div");
+    let moduleName = document.createElement("h1");
 
     moduleName.textContent = mod.Module;
-    moduleName.classList.add("moduleName")
+    moduleName.classList.add("moduleName");
+    container.classList.add("container");
+    headerContainer.classList.add("title-header");
+    footerContainer.classList.add("title-header");
+    footerContainer.innerText = mod.Staff;
 
-    container.classList.add("container")
+    headerContainer.appendChild(h3(mod.Location));
+    headerContainer.appendChild(h3(mod.Type));
+    container.appendChild(moduleName);
 
-    headerContainer.classList.add("title-header")
-
-    headerContainer.appendChild(h3(mod.Location))
-    headerContainer.appendChild(h3(mod.Type))
-
-    module.appendChild(headerContainer)
-    container.appendChild(moduleName)
-    module.appendChild(container)
+    module.appendChild(headerContainer);
+    module.appendChild(container);
+    module.appendChild(footerContainer);
 }
 
-function h3(content, ...classes)
-{
-    let node = document.createElement("h3")
+function h3(content, ...classes) {
+    let node = document.createElement("h3");
     node.textContent = content;
-    node.classList = classes
+    node.classList = classes;
     return node;
 }
 
-function addTime(group)
-{
-    for (let i = START_TIME; i < END_TIME; i++)
-    {
+function addTime(group) {
+    for (let i = START_TIME; i < END_TIME; i++) {
         var time = document.createElement("h2");
-        time.textContent = (i > 12 ? i - 12 : i) + ":00" + (i >= 12 ? " pm" : " am");
+        time.textContent =
+            (i > 12 ? i - 12 : i) + ":00" + (i >= 12 ? " pm" : " am");
         time.classList.add("text-center");
-        group.appendChild(time)
+        group.appendChild(time);
     }
 }
 
-function addColumnTemplates(element)
-{
-    let frs = ""
-    for (let i = 0; i < (END_TIME - START_TIME); i++)
-    {
+function addColumnTemplates(element) {
+    let frs = "";
+    for (let i = 0; i < END_TIME - START_TIME; i++) {
         frs += "1fr ";
     }
 
     element.style.gridTemplateColumns = frs;
 }
 
-function addRowTemplates(element)
-{
-    let frs = "2rem "// for the time row
-    for (let i = 0; i < 5; i++)
-    {
+function addRowTemplates(element) {
+    let frs = "2rem "; // for the time row
+    for (let i = 0; i < 5; i++) {
         frs += "2rem ";
         frs += "1fr ";
     }
@@ -146,15 +145,16 @@ function addRowTemplates(element)
     element.style.gridTemplateRows = frs;
 }
 
-async function main()
-{
-    let data = await fetch("./timetables.json")
-    let timetables = await data.json()
+async function main() {
+    let data = await fetch("./timetables.json");
+    let timetables = await data.json();
 
-    for (let i = 0; i < timetables.length; i++)
-    {
-        let groupLetter = String.fromCharCode(((i % timetables.length) + 97)).toUpperCase();
-        CreateTimetableHtml(timetables[i], groupLetter)
+    for (let i = 0; i < timetables.length; i++) {
+        let groupLetter = String.fromCharCode(
+            (i % timetables.length) + 97
+        ).toUpperCase();
+        console.log(groupLetter);
+        CreateTimetableHtml(timetables[i], groupLetter);
     }
 }
 

@@ -26,7 +26,7 @@ body
     height: 1080px;
     background-color: #191d1f;
 
-    margin: 10rem 0;
+    margin: 20rem auto;
 }
 
 #root
@@ -47,7 +47,11 @@ body
     height: 100%;
     color: #191d1f;
 
-    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 1rem;
 }
 
 .moduleName
@@ -57,7 +61,6 @@ body
 
 .container
 {
-    margin: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,9 +74,14 @@ body
 
 .title-header
 {
-    margin: .75rem;
+    margin: .15rem .7rem;
     display: flex;
     justify-content: space-between;
+}
+
+.staff-name
+{
+    text-align: left;
 }
 
 .day-title
