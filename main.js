@@ -1,10 +1,10 @@
 // GA_KSOAG_H08
 
 const START_TIME = 9; // 9 am
-const END_TIME = 18; // 6pm
+const END_TIME = 17; // 6pm
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-function CreateTimetableHtml(data, letter) {
+function CreateTimetableHtml(data, letter, isMobile) {
     let body = document.getElementById("root");
     let group = document.createElement("div");
 
@@ -37,8 +37,11 @@ function CreateTimetableHtml(data, letter) {
     addGroupTitle(letter, group);
 
     group.appendChild(timetable);
+    if (isMobile) {
+        group.classList.add("Mobile");
+    }
 
-    group.id = letter;
+    // group.id = letter;
     group.classList.add("Group");
 
     body.appendChild(group);
@@ -63,7 +66,8 @@ function CreateTimetableHtml(data, letter) {
                 );
                 var link = document.createElement("a");
                 link.href = tempcanvas.toDataURL("image/png"); //function blocks CORS
-                link.download = "Group " + letter + ".png";
+                link.download =
+                    (isMobile ? "Mobile-" : "") + "Group " + letter + ".png";
                 link.click();
             },
         }),
@@ -154,7 +158,12 @@ async function main() {
             (i % timetables.length) + 97
         ).toUpperCase();
         console.log(groupLetter);
-        CreateTimetableHtml(timetables[i], groupLetter);
+
+        if (groupLetter == "A") {
+            CreateTimetableHtml(timetables[i], groupLetter, true);
+        }
+
+        CreateTimetableHtml(timetables[i], groupLetter, false);
     }
 }
 

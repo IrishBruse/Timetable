@@ -1,11 +1,11 @@
 [
     [
         {
-            "Staff": "DOMINIC CARR",
+            "Staff": "JOHN HEALY",
             "Day": "Monday",
             "Time": "09:00-10:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
+            "Module": "Adv. Software Design",
+            "Color": "pink",
             "Type": "(Lecture)",
             "Location": "0165"
         },
@@ -16,7 +16,7 @@
             "Module": "Research Methods in IT",
             "Color": "yellow",
             "Type": "(Lecture)",
-            "Location": "PF07"
+            "Location": "0996"
         },
         {
             "Staff": "JOHN HEALY",
@@ -26,24 +26,6 @@
             "Color": "orange",
             "Type": "(Lecture)",
             "Location": "0364"
-        },
-        {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Monday",
-            "Time": "13:00-14:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "PF07"
-        },
-        {
-            "Staff": "DAMIEN COSTELLO",
-            "Day": "Monday",
-            "Time": "14:00-16:00",
-            "Module": "Mobile App Dev 3",
-            "Color": "blue",
-            "Type": "(Practical)",
-            "Location": "0470"
         },
         {
             "Staff": "JOHN FRENCH",
@@ -64,10 +46,10 @@
             "Location": "0470"
         },
         {
-            "Staff": "DAMIEN COSTELLO",
+            "Staff": "DANIEL CREGG",
             "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Module": "Mobile App Dev 3",
+            "Module": "Adv. Cross Platform Dev",
             "Color": "blue",
             "Type": "(Lecture)",
             "Location": "0364"
@@ -76,10 +58,28 @@
             "Staff": "JOHN HEALY",
             "Day": "Wednesday",
             "Time": "09:00-10:00",
-            "Module": "Advanced OOP",
+            "Module": "Adv. Software Design",
             "Color": "pink",
             "Type": "(Lecture)",
             "Location": "0938"
+        },
+        {
+            "Staff": "JOHN HEALY",
+            "Day": "Wednesday",
+            "Time": "12:00-13:00",
+            "Module": "Adv. Software Design",
+            "Color": "pink",
+            "Type": "(Practical)",
+            "Location": "0480"
+        },
+        {
+            "Staff": "DOMINIC CARR",
+            "Day": "Wednesday",
+            "Time": "13:00-14:00",
+            "Module": "Research Methods in IT",
+            "Color": "yellow",
+            "Type": "(Tutorial)",
+            "Location": "0436"
         },
         {
             "Staff": "DOMINIC CARR",
@@ -100,6 +100,15 @@
             "Location": "0470"
         },
         {
+            "Staff": "DANIEL CREGG",
+            "Day": "Thursday",
+            "Time": "13:00-14:00",
+            "Module": "Adv. Cross Platform Dev",
+            "Color": "blue",
+            "Type": "(Lecture)",
+            "Location": "0366"
+        },
+        {
             "Staff": "JOHN FRENCH",
             "Day": "Thursday",
             "Time": "14:00-15:00",
@@ -109,31 +118,22 @@
             "Location": "1000"
         },
         {
-            "Staff": "DAMIEN COSTELLO",
+            "Staff": "IAN MC LOUGHLIN",
             "Day": "Thursday",
             "Time": "16:00-17:00",
-            "Module": "Mobile App Dev 3",
-            "Color": "blue",
+            "Module": "Emerging Technologies",
+            "Color": "green",
             "Type": "(Lecture)",
             "Location": "0209"
         },
         {
-            "Staff": "JOHN HEALY",
-            "Day": "Friday",
-            "Time": "09:00-10:00",
-            "Module": "Advanced OOP",
-            "Color": "pink",
-            "Type": "(Lecture)",
-            "Location": "1039"
-        },
-        {
-            "Staff": "JOHN HEALY",
+            "Staff": "DANIEL CREGG",
             "Day": "Friday",
             "Time": "10:00-12:00",
-            "Module": "Advanced OOP",
-            "Color": "pink",
+            "Module": "Adv. Cross Platform Dev",
+            "Color": "blue",
             "Type": "(Practical)",
-            "Location": "0482"
+            "Location": "0470"
         },
         {
             "Staff": "IAN MC LOUGHLIN",
@@ -147,11 +147,11 @@
     ],
     [
         {
-            "Staff": "DOMINIC CARR",
+            "Staff": "JOHN HEALY",
             "Day": "Monday",
             "Time": "09:00-10:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
+            "Module": "Adv. Software Design",
+            "Color": "pink",
             "Type": "(Lecture)",
             "Location": "0165"
         },
@@ -162,7 +162,7 @@
             "Module": "Research Methods in IT",
             "Color": "yellow",
             "Type": "(Lecture)",
-            "Location": "PF07"
+            "Location": "0996"
         },
         {
             "Staff": "JOHN HEALY",
@@ -174,15 +174,6 @@
             "Location": "0364"
         },
         {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Monday",
-            "Time": "13:00-14:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "PF07"
-        },
-        {
             "Staff": "JOHN FRENCH",
             "Day": "Tuesday",
             "Time": "11:00-12:00",
@@ -192,10 +183,10 @@
             "Location": "0365"
         },
         {
-            "Staff": "DAMIEN COSTELLO",
+            "Staff": "DANIEL CREGG",
             "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Module": "Mobile App Dev 3",
+            "Module": "Adv. Cross Platform Dev",
             "Color": "blue",
             "Type": "(Lecture)",
             "Location": "0364"
@@ -204,7 +195,7 @@
             "Staff": "JOHN HEALY",
             "Day": "Wednesday",
             "Time": "09:00-10:00",
-            "Module": "Advanced OOP",
+            "Module": "Adv. Software Design",
             "Color": "pink",
             "Type": "(Lecture)",
             "Location": "0938"
@@ -212,8 +203,8 @@
         {
             "Staff": "JOHN HEALY",
             "Day": "Wednesday",
-            "Time": "11:00-13:00",
-            "Module": "Advanced OOP",
+            "Time": "11:00-12:00",
+            "Module": "Adv. Software Design",
             "Color": "pink",
             "Type": "(Practical)",
             "Location": "0480"
@@ -229,6 +220,15 @@
         },
         {
             "Staff": "DOMINIC CARR",
+            "Day": "Wednesday",
+            "Time": "14:00-15:00",
+            "Module": "Research Methods in IT",
+            "Color": "yellow",
+            "Type": "(Tutorial)",
+            "Location": "0370"
+        },
+        {
+            "Staff": "DOMINIC CARR",
             "Day": "Thursday",
             "Time": "09:00-10:00",
             "Module": "Research Methods in IT",
@@ -237,13 +237,22 @@
             "Location": "0903"
         },
         {
-            "Staff": "DAMIEN COSTELLO",
+            "Staff": "DANIEL CREGG",
             "Day": "Thursday",
             "Time": "10:00-12:00",
-            "Module": "Mobile App Dev 3",
+            "Module": "Adv. Cross Platform Dev",
             "Color": "blue",
             "Type": "(Practical)",
             "Location": "0370"
+        },
+        {
+            "Staff": "DANIEL CREGG",
+            "Day": "Thursday",
+            "Time": "13:00-14:00",
+            "Module": "Adv. Cross Platform Dev",
+            "Color": "blue",
+            "Type": "(Lecture)",
+            "Location": "0366"
         },
         {
             "Staff": "JOHN FRENCH",
@@ -255,22 +264,13 @@
             "Location": "1000"
         },
         {
-            "Staff": "DAMIEN COSTELLO",
+            "Staff": "IAN MC LOUGHLIN",
             "Day": "Thursday",
             "Time": "16:00-17:00",
-            "Module": "Mobile App Dev 3",
-            "Color": "blue",
+            "Module": "Emerging Technologies",
+            "Color": "green",
             "Type": "(Lecture)",
             "Location": "0209"
-        },
-        {
-            "Staff": "JOHN HEALY",
-            "Day": "Friday",
-            "Time": "09:00-10:00",
-            "Module": "Advanced OOP",
-            "Color": "pink",
-            "Type": "(Lecture)",
-            "Location": "1039"
         },
         {
             "Staff": "IAN MC LOUGHLIN",
@@ -279,7 +279,7 @@
             "Module": "Emerging Technologies",
             "Color": "green",
             "Type": "(Practical)",
-            "Location": "0470"
+            "Location": "0482"
         },
         {
             "Staff": "IAN MC LOUGHLIN",

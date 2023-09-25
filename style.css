@@ -4,6 +4,11 @@
     font-weight: bolder;
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins-Regular.ttf");
+}
+
 *
 {
     padding: 0;
@@ -29,15 +34,25 @@ body
     margin: 20rem auto;
 }
 
-#root
-{}
-
+.Mobile.Group
+{
+    width: 2400px;
+    background-color: #000000;
+}
 
 .Timetable
 {
     display: grid;
     gap: .5rem;
     padding: 1rem;
+}
+
+
+.Mobile .Timetable
+{
+    display: grid;
+    gap: .5rem;
+    padding: 1rem 8rem;
 }
 
 .Module
@@ -56,7 +71,7 @@ body
 
 .moduleName
 {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
 }
 
 .container
@@ -88,6 +103,11 @@ body
 {
     grid-column: 1/-1;
     background-color: #23272a;
+}
+
+.Mobile .day-title
+{
+    background-color: #000000;
 }
 
 

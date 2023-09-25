@@ -22,12 +22,12 @@ const moduleMap = {
         Module: "Distributed Systems",
         Color: "red",
     },
-    "MOBILE APPLICATIONS DEVELOPMENT 3": {
-        Module: "Mobile App Dev 3",
+    "ADVANCED CROSS PLATFORM DEVELOPMENT": {
+        Module: "Adv. Cross Platform Dev",
         Color: "blue",
     },
-    "ADVANCED OBJECT ORIENTED SOFTWARE DEVELOPMENT": {
-        Module: "Advanced OOP",
+    "ADVANCED SOFTWARE DESIGN": {
+        Module: "Adv. Software Design",
         Color: "pink",
     },
 };
@@ -126,7 +126,13 @@ function convertDescription(value: string): {
         .slice(splits[1] == "A" || splits[1] == "B" ? 2 : 1)
         .join(" ");
 
-    return { ...moduleMap[key], Type: typeMap[slashSplit[1]] };
+    let test = moduleMap[key];
+
+    if (!test) {
+        console.log(key, "module not found");
+    }
+
+    return { ...test, Type: typeMap[slashSplit[1]] };
 }
 
 parseXLSX("A");
