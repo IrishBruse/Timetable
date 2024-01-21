@@ -1,34 +1,26 @@
-import * as XLSX from "xlsx";
 import * as fs from "fs";
+import * as XLSX from "xlsx";
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 let timetables = [];
 
 const moduleMap = {
-    "RESEARCH METHODS IN COMPUTING AND IT": {
-        Module: "Research Methods in IT",
+    "Theory of Algorithms": {
+        Module: "Theory of Algorithms",
         Color: "yellow",
     },
-    "APPLIED PROJECT AND MINOR DISSERTATION": {
-        Module: "Applied Project",
+    "Artificial Intelligence": {
+        Module: "Artificial Intelligence",
         Color: "orange",
     },
-    "EMERGING TECHNOLOGIES": {
-        Module: "Emerging Technologies",
+    "Software Eng": {
+        Module: "Software Eng",
         Color: "green",
     },
-    "DISTRIBUTED SYSTEMS": {
-        Module: "Distributed Systems",
-        Color: "red",
-    },
-    "ADVANCED CROSS PLATFORM DEVELOPMENT": {
-        Module: "Adv. Cross Platform Dev",
+    "Gesture Based UI Dev": {
+        Module: "Gesture Based UI",
         Color: "blue",
-    },
-    "ADVANCED SOFTWARE DESIGN": {
-        Module: "Adv. Software Design",
-        Color: "pink",
     },
 };
 
@@ -79,9 +71,14 @@ function parseXLSX(groupName) {
 
     let formattedModules: Module[] = [];
 
+    console.log();
+    console.log(groupName);
+
     for (const module of table) {
-        let group = module.Description.split(" ")[1];
-        if (group == groupName || !["A", "B"].includes(group)) {
+        let group = module.Description.split(/ |\//).splice(1);
+
+        if (group.includes(groupName) || group[group.length - 1] == "L") {
+            console.log(group);
             formattedModules.push(ConvertModule(module));
         }
     }
@@ -109,8 +106,10 @@ function convertStaff(value: string): string {
 }
 
 function convertLocation(value: string): string {
-    let location = value.split(" ")[1];
-    return location;
+    return value
+        .slice(3)
+        .replace("Computing Practical Lab ", "")
+        .replace("Computer Lab ", "CR");
 }
 
 function convertDescription(value: string): {
@@ -118,18 +117,21 @@ function convertDescription(value: string): {
     Color: string;
     Type: string;
 } {
-    let slashSplit = value.split("/");
+    let slashSplit = value.split("/")[0].split("Gr");
+    let splits = slashSplit[0].trim().split(" ").splice(1);
+    let group = slashSplit[1];
 
-    let splits = slashSplit[0].split(" ");
+    if (!group && (splits[0] == "A" || splits[0] == "B")) {
+        group = splits[0];
+        splits = splits.splice(1);
+    }
 
-    let key = splits
-        .slice(splits[1] == "A" || splits[1] == "B" ? 2 : 1)
-        .join(" ");
-
+    const key = splits.join(" ");
     let test = moduleMap[key];
 
     if (!test) {
-        console.log(key, "module not found");
+        console.log("\nModule not found\n" + key);
+        test = { Module: key, Color: "ERROR" };
     }
 
     return { ...test, Type: typeMap[slashSplit[1]] };

@@ -1,7 +1,7 @@
 // GA_KSOAG_H08
 
 const START_TIME = 9; // 9 am
-const END_TIME = 17; // 6pm
+const END_TIME = 18; // 6pm
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 function CreateTimetableHtml(data, letter, isMobile) {
@@ -12,14 +12,13 @@ function CreateTimetableHtml(data, letter, isMobile) {
     timetable.classList.add("Timetable");
 
     addTime(timetable);
-
     addColumnTemplates(timetable);
     addRowTemplates(timetable);
 
-    for (let i = 0; i < 5; i++) {
-        addDayHeader(i, timetable);
+    for (const day of DAYS_OF_WEEK) {
+        addDayHeader(day, timetable);
 
-        for (const mod of data.filter((d) => DAYS_OF_WEEK[i] == d.Day)) {
+        for (const mod of data.filter((d) => day == d.Day)) {
             let node = document.createElement("div");
             node.classList.add("Module");
 
@@ -75,10 +74,10 @@ function CreateTimetableHtml(data, letter, isMobile) {
     );
 }
 
-function addDayHeader(i, timetable) {
+function addDayHeader(day, timetable) {
     let node = document.createElement("h2");
     node.classList.add("text-center", "day-title");
-    node.textContent = DAYS_OF_WEEK[i];
+    node.textContent = day;
     timetable.appendChild(node);
 }
 
@@ -90,6 +89,7 @@ function addGroupTitle(letter, group) {
 }
 
 function addModule(module, mod) {
+    console.log(mod);
     module.classList.add(mod.Color);
 
     let headerContainer = document.createElement("div");
@@ -142,8 +142,12 @@ function addColumnTemplates(element) {
 function addRowTemplates(element) {
     let frs = "2rem "; // for the time row
     for (let i = 0; i < 5; i++) {
-        frs += "2rem ";
-        frs += "1fr ";
+        if (i != 1) {
+            frs += "2rem ";
+            frs += "1fr ";
+        } else {
+            frs += "2rem ";
+        }
     }
 
     element.style.gridTemplateRows = frs;
@@ -157,7 +161,6 @@ async function main() {
         let groupLetter = String.fromCharCode(
             (i % timetables.length) + 97
         ).toUpperCase();
-        console.log(groupLetter);
 
         if (groupLetter == "A") {
             CreateTimetableHtml(timetables[i], groupLetter, true);

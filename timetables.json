@@ -1,294 +1,182 @@
 [
     [
         {
-            "Staff": "JOHN HEALY",
-            "Day": "Monday",
-            "Time": "09:00-10:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Lecture)",
-            "Location": "0165"
-        },
-        {
-            "Staff": "DOMINIC CARR",
+            "Staff": "DONNY HURLEY",
             "Day": "Monday",
             "Time": "10:00-11:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
-            "Type": "(Lecture)",
-            "Location": "0996"
+            "Module": "Gesture Based UI",
+            "Color": "blue",
+            "Location": "0995"
+        },
+        {
+            "Staff": "JOHN FRENCH",
+            "Day": "Monday",
+            "Time": "11:00-12:00",
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0995"
         },
         {
             "Staff": "JOHN HEALY",
             "Day": "Monday",
-            "Time": "12:00-13:00",
-            "Module": "Applied Project",
-            "Color": "orange",
-            "Type": "(Lecture)",
-            "Location": "0364"
-        },
-        {
-            "Staff": "JOHN FRENCH",
-            "Day": "Tuesday",
-            "Time": "11:00-12:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Lecture)",
-            "Location": "0365"
-        },
-        {
-            "Staff": "JOHN FRENCH",
-            "Day": "Tuesday",
-            "Time": "12:00-13:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Practical)",
-            "Location": "0470"
-        },
-        {
-            "Staff": "DANIEL CREGG",
-            "Day": "Tuesday",
             "Time": "13:00-14:00",
-            "Module": "Adv. Cross Platform Dev",
-            "Color": "blue",
-            "Type": "(Lecture)",
-            "Location": "0364"
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0997"
         },
         {
-            "Staff": "JOHN HEALY",
+            "Staff": "IAN MC LOUGHLIN",
             "Day": "Wednesday",
-            "Time": "09:00-10:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Lecture)",
+            "Time": "10:00-11:00",
+            "Module": "Theory of Algorithms",
+            "Color": "yellow",
+            "Location": "0482 CR3"
+        },
+        {
+            "Staff": "JOHN FRENCH",
+            "Day": "Wednesday",
+            "Time": "12:00-13:00",
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0436 CR5"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Wednesday",
+            "Time": "13:00-14:00",
+            "Module": "Theory of Algorithms",
+            "Color": "yellow",
             "Location": "0938"
         },
         {
             "Staff": "JOHN HEALY",
             "Day": "Wednesday",
-            "Time": "12:00-13:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Practical)",
-            "Location": "0480"
-        },
-        {
-            "Staff": "DOMINIC CARR",
-            "Day": "Wednesday",
-            "Time": "13:00-14:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
-            "Type": "(Tutorial)",
-            "Location": "0436"
-        },
-        {
-            "Staff": "DOMINIC CARR",
-            "Day": "Thursday",
-            "Time": "09:00-10:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
-            "Type": "(Lecture)",
-            "Location": "0903"
-        },
-        {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Thursday",
-            "Time": "10:00-12:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Practical)",
-            "Location": "0470"
-        },
-        {
-            "Staff": "DANIEL CREGG",
-            "Day": "Thursday",
-            "Time": "13:00-14:00",
-            "Module": "Adv. Cross Platform Dev",
-            "Color": "blue",
-            "Type": "(Lecture)",
-            "Location": "0366"
+            "Time": "15:00-16:00",
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0370 Science Computer Lab"
         },
         {
             "Staff": "JOHN FRENCH",
             "Day": "Thursday",
-            "Time": "14:00-15:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Lecture)",
-            "Location": "1000"
+            "Time": "10:00-11:00",
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0997"
         },
         {
             "Staff": "IAN MC LOUGHLIN",
             "Day": "Thursday",
-            "Time": "16:00-17:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "0209"
+            "Time": "11:00-12:00",
+            "Module": "Theory of Algorithms",
+            "Color": "yellow",
+            "Location": "0997"
         },
         {
-            "Staff": "DANIEL CREGG",
-            "Day": "Friday",
-            "Time": "10:00-12:00",
-            "Module": "Adv. Cross Platform Dev",
+            "Staff": "JOHN HEALY",
+            "Day": "Thursday",
+            "Time": "13:00-14:00",
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0997"
+        },
+        {
+            "Staff": "DONNY HURLEY",
+            "Day": "Thursday",
+            "Time": "15:00-18:00",
+            "Module": "Gesture Based UI",
             "Color": "blue",
-            "Type": "(Practical)",
-            "Location": "0470"
-        },
-        {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Friday",
-            "Time": "12:00-13:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "0366"
+            "Location": "0470 (BYOD)"
         }
     ],
     [
         {
-            "Staff": "JOHN HEALY",
-            "Day": "Monday",
-            "Time": "09:00-10:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Lecture)",
-            "Location": "0165"
-        },
-        {
-            "Staff": "DOMINIC CARR",
+            "Staff": "DONNY HURLEY",
             "Day": "Monday",
             "Time": "10:00-11:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
-            "Type": "(Lecture)",
-            "Location": "0996"
-        },
-        {
-            "Staff": "JOHN HEALY",
-            "Day": "Monday",
-            "Time": "12:00-13:00",
-            "Module": "Applied Project",
-            "Color": "orange",
-            "Type": "(Lecture)",
-            "Location": "0364"
+            "Module": "Gesture Based UI",
+            "Color": "blue",
+            "Location": "0995"
         },
         {
             "Staff": "JOHN FRENCH",
-            "Day": "Tuesday",
+            "Day": "Monday",
             "Time": "11:00-12:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Lecture)",
-            "Location": "0365"
-        },
-        {
-            "Staff": "DANIEL CREGG",
-            "Day": "Tuesday",
-            "Time": "13:00-14:00",
-            "Module": "Adv. Cross Platform Dev",
-            "Color": "blue",
-            "Type": "(Lecture)",
-            "Location": "0364"
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0995"
         },
         {
             "Staff": "JOHN HEALY",
+            "Day": "Monday",
+            "Time": "13:00-14:00",
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0997"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
             "Day": "Wednesday",
-            "Time": "09:00-10:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Lecture)",
+            "Time": "12:00-13:00",
+            "Module": "Theory of Algorithms",
+            "Color": "yellow",
+            "Location": "0470 (BYOD)"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Wednesday",
+            "Time": "13:00-14:00",
+            "Module": "Theory of Algorithms",
+            "Color": "yellow",
             "Location": "0938"
         },
         {
-            "Staff": "JOHN HEALY",
+            "Staff": "JOHN FRENCH",
             "Day": "Wednesday",
+            "Time": "15:00-16:00",
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0481 CR4"
+        },
+        {
+            "Staff": "JOHN FRENCH",
+            "Day": "Thursday",
+            "Time": "10:00-11:00",
+            "Module": "Software Eng",
+            "Color": "green",
+            "Location": "0997"
+        },
+        {
+            "Staff": "IAN MC LOUGHLIN",
+            "Day": "Thursday",
             "Time": "11:00-12:00",
-            "Module": "Adv. Software Design",
-            "Color": "pink",
-            "Type": "(Practical)",
-            "Location": "0480"
-        },
-        {
-            "Staff": "JOHN FRENCH",
-            "Day": "Wednesday",
-            "Time": "13:00-14:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Practical)",
-            "Location": "0470"
-        },
-        {
-            "Staff": "DOMINIC CARR",
-            "Day": "Wednesday",
-            "Time": "14:00-15:00",
-            "Module": "Research Methods in IT",
+            "Module": "Theory of Algorithms",
             "Color": "yellow",
-            "Type": "(Tutorial)",
-            "Location": "0370"
+            "Location": "0997"
         },
         {
-            "Staff": "DOMINIC CARR",
-            "Day": "Thursday",
-            "Time": "09:00-10:00",
-            "Module": "Research Methods in IT",
-            "Color": "yellow",
-            "Type": "(Lecture)",
-            "Location": "0903"
-        },
-        {
-            "Staff": "DANIEL CREGG",
-            "Day": "Thursday",
-            "Time": "10:00-12:00",
-            "Module": "Adv. Cross Platform Dev",
-            "Color": "blue",
-            "Type": "(Practical)",
-            "Location": "0370"
-        },
-        {
-            "Staff": "DANIEL CREGG",
+            "Staff": "JOHN HEALY",
             "Day": "Thursday",
             "Time": "13:00-14:00",
-            "Module": "Adv. Cross Platform Dev",
-            "Color": "blue",
-            "Type": "(Lecture)",
-            "Location": "0366"
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0997"
         },
         {
-            "Staff": "JOHN FRENCH",
+            "Staff": "JOHN HEALY",
             "Day": "Thursday",
             "Time": "14:00-15:00",
-            "Module": "Distributed Systems",
-            "Color": "red",
-            "Type": "(Lecture)",
-            "Location": "1000"
+            "Module": "Artificial Intelligence",
+            "Color": "orange",
+            "Location": "0483 CR2"
         },
         {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Thursday",
-            "Time": "16:00-17:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "0209"
-        },
-        {
-            "Staff": "IAN MC LOUGHLIN",
+            "Staff": "DONNY HURLEY",
             "Day": "Friday",
-            "Time": "10:00-12:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Practical)",
-            "Location": "0482"
-        },
-        {
-            "Staff": "IAN MC LOUGHLIN",
-            "Day": "Friday",
-            "Time": "12:00-13:00",
-            "Module": "Emerging Technologies",
-            "Color": "green",
-            "Type": "(Lecture)",
-            "Location": "0366"
+            "Time": "09:00-12:00",
+            "Module": "Gesture Based UI",
+            "Color": "blue",
+            "Location": "0480 CR7"
         }
     ]
 ]
