@@ -1,8 +1,9 @@
 // GA_KSOAG_H08
 
-const START_TIME = 9; // 9 am
-const END_TIME = 18; // 6pm
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+var startTime;
+var endTime;
 
 function CreateTimetableHtml(data, letter, isMobile) {
     let body = document.getElementById("root");
@@ -23,8 +24,8 @@ function CreateTimetableHtml(data, letter, isMobile) {
             node.classList.add("Module");
 
             let times = mod.Time.split("-");
-            times[0] = Number.parseInt(times[0]) - START_TIME + 1;
-            times[1] = Number.parseInt(times[1]) - START_TIME + 1;
+            times[0] = Number.parseInt(times[0]) - startTime + 1;
+            times[1] = Number.parseInt(times[1]) - startTime + 1;
             node.style.gridColumn = times.join(" / ");
 
             addModule(node, mod);
@@ -105,7 +106,7 @@ function addModule(module, mod) {
     footerContainer.innerText = mod.Staff;
 
     headerContainer.appendChild(h3(mod.Location));
-    headerContainer.appendChild(h3(mod.Type));
+    headerContainer.appendChild(h4(mod.Type));
     container.appendChild(moduleName);
 
     module.appendChild(headerContainer);
@@ -119,9 +120,15 @@ function h3(content, ...classes) {
     node.classList = classes;
     return node;
 }
+function h4(content, ...classes) {
+    let node = document.createElement("h4");
+    node.textContent = content;
+    node.classList = classes;
+    return node;
+}
 
 function addTime(group) {
-    for (let i = START_TIME; i < END_TIME; i++) {
+    for (let i = startTime; i < endTime; i++) {
         var time = document.createElement("h2");
         time.textContent =
             (i > 12 ? i - 12 : i) + ":00" + (i >= 12 ? " pm" : " am");
@@ -132,7 +139,7 @@ function addTime(group) {
 
 function addColumnTemplates(element) {
     let frs = "";
-    for (let i = 0; i < END_TIME - START_TIME; i++) {
+    for (let i = 0; i < endTime - startTime; i++) {
         frs += "1fr ";
     }
 
@@ -161,6 +168,14 @@ async function main() {
         let groupLetter = String.fromCharCode(
             (i % timetables.length) + 97
         ).toUpperCase();
+
+        if (groupLetter == "A") {
+            startTime = 10;
+            endTime = 18;
+        } else {
+            startTime = 9;
+            endTime = 16;
+        }
 
         if (groupLetter == "A") {
             CreateTimetableHtml(timetables[i], groupLetter, true);

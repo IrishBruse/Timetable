@@ -6,6 +6,7 @@
             "Time": "10:00-11:00",
             "Module": "Gesture Based UI",
             "Color": "blue",
+            "Type": "(Lecture)",
             "Location": "0995"
         },
         {
@@ -14,6 +15,7 @@
             "Time": "11:00-12:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Lecture)",
             "Location": "0995"
         },
         {
@@ -22,6 +24,7 @@
             "Time": "13:00-14:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -30,6 +33,7 @@
             "Time": "10:00-11:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Practical)",
             "Location": "0482 CR3"
         },
         {
@@ -38,6 +42,7 @@
             "Time": "12:00-13:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Practical)",
             "Location": "0436 CR5"
         },
         {
@@ -46,6 +51,7 @@
             "Time": "13:00-14:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Lecture)",
             "Location": "0938"
         },
         {
@@ -54,7 +60,8 @@
             "Time": "15:00-16:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
-            "Location": "0370 Science Computer Lab"
+            "Type": "(Practical)",
+            "Location": "0370"
         },
         {
             "Staff": "JOHN FRENCH",
@@ -62,6 +69,7 @@
             "Time": "10:00-11:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -70,6 +78,7 @@
             "Time": "11:00-12:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -78,6 +87,7 @@
             "Time": "13:00-14:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -86,6 +96,7 @@
             "Time": "15:00-18:00",
             "Module": "Gesture Based UI",
             "Color": "blue",
+            "Type": "(Practical)",
             "Location": "0470 (BYOD)"
         }
     ],
@@ -96,6 +107,7 @@
             "Time": "10:00-11:00",
             "Module": "Gesture Based UI",
             "Color": "blue",
+            "Type": "(Lecture)",
             "Location": "0995"
         },
         {
@@ -104,6 +116,7 @@
             "Time": "11:00-12:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Lecture)",
             "Location": "0995"
         },
         {
@@ -112,6 +125,7 @@
             "Time": "13:00-14:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -120,6 +134,7 @@
             "Time": "12:00-13:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Practical)",
             "Location": "0470 (BYOD)"
         },
         {
@@ -128,6 +143,7 @@
             "Time": "13:00-14:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Lecture)",
             "Location": "0938"
         },
         {
@@ -136,6 +152,7 @@
             "Time": "15:00-16:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Practical)",
             "Location": "0481 CR4"
         },
         {
@@ -144,6 +161,7 @@
             "Time": "10:00-11:00",
             "Module": "Software Eng",
             "Color": "green",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -152,6 +170,7 @@
             "Time": "11:00-12:00",
             "Module": "Theory of Algorithms",
             "Color": "yellow",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -160,6 +179,7 @@
             "Time": "13:00-14:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
+            "Type": "(Lecture)",
             "Location": "0997"
         },
         {
@@ -168,6 +188,7 @@
             "Time": "14:00-15:00",
             "Module": "Artificial Intelligence",
             "Color": "orange",
+            "Type": "(Practical)",
             "Location": "0483 CR2"
         },
         {
@@ -176,6 +197,7 @@
             "Time": "09:00-12:00",
             "Module": "Gesture Based UI",
             "Color": "blue",
+            "Type": "(Practical)",
             "Location": "0480 CR7"
         }
     ]

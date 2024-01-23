@@ -108,7 +108,8 @@ function convertStaff(value: string): string {
 function convertLocation(value: string): string {
     return value
         .slice(3)
-        .replace("Computing Practical Lab ", "")
+        .replace(" Computing Practical Lab", "")
+        .replace(" Science Computer Lab", "")
         .replace("Computer Lab ", "CR");
 }
 
@@ -134,7 +135,7 @@ function convertDescription(value: string): {
         test = { Module: key, Color: "ERROR" };
     }
 
-    return { ...test, Type: typeMap[slashSplit[1]] };
+    return { ...test, Type: typeMap[value.split("/")[1]] };
 }
 
 parseXLSX("A");
